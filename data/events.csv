@@ -1,0 +1,11 @@
+code,label,category
+PGII,Petition filed,Petition
+NOH,Notice of hearing,Notice
+PPS,Proof of personal service,Service
+POS,Proof of service (other),Service
+OBJ,Objection filed,Objection
+OAF,Order appointing fiduciary,Order
+ONG,Order on guardianship,Order
+LET,Letters of authority,Authority
+LOG,Letters of guardianship,Authority
+AOA,Acceptance of appointment,Authority
