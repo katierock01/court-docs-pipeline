@@ -9,11 +9,13 @@ Checks:
 
 Outputs:
 - data/court_docs_audit.csv
+- data/audit_history/audit_<timestamp>.csv (archived copies; opt-out with --no-archive)
 """
 
 import argparse
 import csv
 import datetime as dt
+import shutil
 from collections import Counter, defaultdict
 from pathlib import Path
 from typing import Dict, List
@@ -21,6 +23,7 @@ from typing import Dict, List
 PARSED_CSV = Path("data") / "court_docs_parsed.csv"
 CASES_CSV = Path("data") / "cases.csv"
 OUTPUT_CSV = Path("data") / "court_docs_audit.csv"
+TIMESTAMPED_OUTPUT = Path("data") / "audit_history"
 
 
 def load_cases(path: Path) -> Dict[str, Dict[str, str]]:
@@ -142,14 +145,24 @@ def audit(parsed: List[Dict[str, str]], cases: Dict[str, Dict[str, str]]) -> Lis
     return issues
 
 
-def write_issues(issues: List[Dict[str, str]], output: Path) -> None:
+def write_issues(issues: List[Dict[str, str]], output: Path, timestamp: bool = True) -> None:
     fieldnames = ["issue_type", "case_id", "file_name", "filed_date", "detail"]
     output.parent.mkdir(parents=True, exist_ok=True)
+
+    # Write current audit results
     with output.open("w", newline="", encoding="utf-8") as f:
         writer = csv.DictWriter(f, fieldnames=fieldnames)
         writer.writeheader()
         for row in issues:
             writer.writerow(row)
+
+    # Optionally archive a timestamped copy for history
+    if timestamp:
+        TIMESTAMPED_OUTPUT.mkdir(parents=True, exist_ok=True)
+        ts = dt.datetime.now().strftime("%Y%m%d_%H%M%S")
+        archive_path = TIMESTAMPED_OUTPUT / f"audit_{ts}.csv"
+        shutil.copy2(output, archive_path)
+        print(f"Archived audit to {archive_path}")
 
 
 def main() -> None:
@@ -157,6 +170,7 @@ def main() -> None:
     parser.add_argument("--parsed", type=Path, default=PARSED_CSV, help="Parsed documents CSV.")
     parser.add_argument("--cases", type=Path, default=CASES_CSV, help="Cases CSV.")
     parser.add_argument("--output", type=Path, default=OUTPUT_CSV, help="Audit output CSV.")
+    parser.add_argument("--no-archive", action="store_true", help="Skip timestamped archive copy.")
     args = parser.parse_args()
 
     if not args.parsed.exists():
@@ -167,7 +181,7 @@ def main() -> None:
     parsed = load_parsed(args.parsed)
     cases = load_cases(args.cases)
     issues = audit(parsed, cases)
-    write_issues(issues, args.output)
+    write_issues(issues, args.output, timestamp=not args.no_archive)
     print(f"Wrote audit issues to {args.output} ({len(issues)} rows)")
 
 

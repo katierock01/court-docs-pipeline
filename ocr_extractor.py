@@ -21,6 +21,7 @@ import sys
 import csv
 import json
 import time
+import os
 from dataclasses import dataclass
 from pathlib import Path
 from typing import List, Optional, Tuple
@@ -290,7 +291,7 @@ def print_summary(results: List[DocumentResult]) -> None:
     low_quality = sum(1 for r in results if r.quality_score < 60)
 
     print("\nQuality breakdown:")
-    print(f"  High (≥80):    {high_quality} documents")
+    print(f"  High (>=80):    {high_quality} documents")
     print(f"  Medium (60-79): {medium_quality} documents")
     print(f"  Low (<60):     {low_quality} documents\n")
 
@@ -378,6 +379,16 @@ def parse_args(argv: Optional[List[str]] = None) -> argparse.Namespace:
 def main(argv: Optional[List[str]] = None) -> int:
     args = parse_args(argv)
 
+    if not args.poppler_path:
+        env_poppler = os.environ.get("POPPLER_PATH")
+        if env_poppler:
+            args.poppler_path = env_poppler
+
+    if not args.tesseract_cmd:
+        env_tess = os.environ.get("TESSERACT_CMD")
+        if env_tess:
+            args.tesseract_cmd = env_tess
+
     if args.tesseract_cmd:
         pytesseract.pytesseract.tesseract_cmd = args.tesseract_cmd
 
@@ -457,3 +468,5 @@ def main(argv: Optional[List[str]] = None) -> int:
 
 if __name__ == "__main__":
     sys.exit(main())
+
+

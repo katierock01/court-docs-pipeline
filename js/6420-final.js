@@ -195,6 +195,44 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  function renderDatasetSummary(data) {
+    const totalEvents = data.length;
+    const uniqueCases = new Set(data.map((r) => r.case_number)).size;
+    const uniqueSources = new Set(data.map((r) => r.source_view)).size;
+
+    let statsDiv = document.getElementById('data-stats');
+    if (!statsDiv) {
+      statsDiv = document.createElement('div');
+      statsDiv.id = 'data-stats';
+      statsDiv.className = 'card';
+
+      const filtersSection = document.querySelector('.filters');
+      if (filtersSection && filtersSection.parentElement) {
+        filtersSection.parentElement.insertBefore(statsDiv, filtersSection);
+      } else {
+        document.body.insertBefore(statsDiv, document.body.firstChild);
+      }
+    }
+
+    statsDiv.innerHTML = `
+      <h3>Dataset Summary</h3>
+      <div class="stats-grid">
+        <div class="stat">
+          <span class="stat-value">${totalEvents}</span>
+          <span class="stat-label">Total Events</span>
+        </div>
+        <div class="stat">
+          <span class="stat-value">${uniqueCases}</span>
+          <span class="stat-label">Cases</span>
+        </div>
+        <div class="stat">
+          <span class="stat-value">${uniqueSources}</span>
+          <span class="stat-label">Data Sources</span>
+        </div>
+      </div>
+    `;
+  }
+
   function updateStats(data) {
     const cases = new Set(data.map((r) => r.case_number).filter(Boolean));
     const types = new Set(data.map((r) => r.document_type).filter(Boolean));
@@ -214,9 +252,30 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     rowsAudit.forEach((r) => {
       const li = document.createElement('li');
-      li.textContent = `${r.issue_type} — ${r.case_id} — ${r.detail} (${r.file_name || 'n/a'})`;
+      li.textContent = `${r.issue_type} - ${r.case_id} - ${r.detail} (${r.file_name || 'n/a'})`;
       auditList.appendChild(li);
     });
+  }
+
+  function updateAuditStats(auditRows) {
+    const issueCountEl = document.getElementById('audit-issue-count');
+    const orphanCountEl = document.getElementById('audit-orphan-count');
+    const cleanCountEl = document.getElementById('audit-clean-count');
+    if (!issueCountEl && !orphanCountEl && !cleanCountEl) return;
+
+    const totalIssues = auditRows.length;
+    const orphanIssues = auditRows.filter((r) => (r.issue_type || '').toLowerCase() === 'orphan_document').length;
+
+    const parsedCases = new Set(rows.map((r) => r.case_number).filter(Boolean));
+    const issueCases = new Set(auditRows.map((r) => r.case_id).filter(Boolean));
+    let cleanCases = 0;
+    parsedCases.forEach((cid) => {
+      if (!issueCases.has(cid)) cleanCases += 1;
+    });
+
+    if (issueCountEl) issueCountEl.textContent = totalIssues;
+    if (orphanCountEl) orphanCountEl.textContent = orphanIssues;
+    if (cleanCountEl) cleanCountEl.textContent = cleanCases;
   }
 
   async function loadData() {
@@ -225,6 +284,7 @@ document.addEventListener('DOMContentLoaded', () => {
       if (!parsedRes.ok) throw new Error('parsed CSV not found');
       rows = parseCsv(await parsedRes.text());
       updateStats(rows);
+       renderDatasetSummary(rows);
       populateFilters(rows);
       applyFilters();
     } catch (err) {
@@ -242,8 +302,53 @@ document.addEventListener('DOMContentLoaded', () => {
       if (!auditRes.ok) throw new Error('audit CSV not found');
       const auditRows = parseCsv(await auditRes.text());
       renderAudit(auditRows);
+      updateAuditStats(auditRows);
     } catch (err) {
       renderAudit([]);
+    }
+  }
+
+  async function loadParserHealth() {
+    const filesCountEl = document.getElementById('parser-files-count');
+    const tableCountEl = document.getElementById('parser-table-count');
+    const fallbackCountEl = document.getElementById('parser-fallback-count');
+    const warningsList = document.getElementById('parser-warnings-list');
+    if (!filesCountEl || !tableCountEl || !fallbackCountEl || !warningsList) return;
+
+    try {
+      const res = await fetch('data/parse_report.json');
+      if (!res.ok) throw new Error('parse_report.json not found');
+      const reports = await res.json();
+
+      const totalFiles = reports.length;
+      const tableMode = reports.filter((r) => String(r.strategy_used || '').toLowerCase().startsWith('table')).length;
+      const fallbackMode = totalFiles - tableMode;
+
+      filesCountEl.textContent = totalFiles;
+      tableCountEl.textContent = tableMode;
+      fallbackCountEl.textContent = fallbackMode;
+
+      warningsList.innerHTML = '';
+      let hasWarnings = false;
+      reports.forEach((r) => {
+        if (r.warnings && r.warnings.length) {
+          hasWarnings = true;
+          r.warnings.forEach((w) => {
+            const li = document.createElement('li');
+            li.className = 'audit-item warning';
+            li.textContent = `[${r.filename}] ${w}`;
+            warningsList.appendChild(li);
+          });
+        }
+      });
+
+      if (!hasWarnings) {
+        const li = document.createElement('li');
+        li.textContent = 'No parser warnings. System healthy.';
+        warningsList.appendChild(li);
+      }
+    } catch (err) {
+      warningsList.innerHTML = '<li>Parser report unavailable. Run parse_court_docs.py first.</li>';
     }
   }
 
@@ -254,4 +359,5 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   loadData();
+  loadParserHealth();
 });

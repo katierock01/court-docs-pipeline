@@ -1,0 +1,8 @@
+requirement_id,category,description,severity,check_type,expected_days_max
+PR01,visibility,Petition filed within system,critical,event_present,0
+PR02,visibility,Notice of hearing documented,critical,event_present,30
+PR03,visibility,Proof of service filed,critical,event_present,45
+PR04,visibility,Order appointing guardian issued,critical,event_present,90
+PR05,visibility,Letters of authority issued,critical,event_present,90
+PR06,timing,Guardian appointed within 90 days of petition,warning,days_between,90
+PR07,completeness,All required events present in sequence,warning,event_sequence,365

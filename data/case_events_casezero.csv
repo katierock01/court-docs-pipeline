@@ -1,0 +1,26 @@
+event_id,case_id,event_date,code,description,judge,source_view,document_id
+2025-0000424475-GA-01/06/2025-01,2025-0000424475-GA,01/06/2025,PGII,Petition filed,"of Record
+RICHARDS",ocr_pipeline,MiCourt_Events.pdf
+2025-0000424475-GA-10/02/2025-01,2025-0000424475-GA,10/02/2025,,INVENTORY FILED,,events_table,MiCourt_Events.pdf
+2025-0000424475-GA-07/09/2025-01,2025-0000424475-GA,07/09/2025,LOG,Letters of guardianship,,events_table,MiCourt_Events.pdf
+2025-0000424475-GA-06/18/2025-01,2025-0000424475-GA,06/18/2025,POS,Proof of service (other),,events_table,MiCourt_Events.pdf
+2025-0000424475-GA-06/09/2025-01,2025-0000424475-GA,06/09/2025,,SET CASE ON CALENDAR,,events_table,MiCourt_Events.pdf
+2025-0000424475-GA-06/27/2025-01,2025-0000424475-GA,06/27/2025,POS,Proof of service (other),,events_table,MiCourt_Events.pdf
+2025-0000424475-GA-06/06/2025-01,2025-0000424475-GA,06/06/2025,OAF,Order appointing fiduciary,,events_table,MiCourt_Events.pdf
+2025-0000424475-GA-05/20/2025-01,2025-0000424475-GA,05/20/2025,,MISCELLANEOUS DOCUMENT FILED,,events_table,MiCourt_Events.pdf
+2025-0000424475-GA-05/19/2025-01,2025-0000424475-GA,05/19/2025,,MOTION FILED,,events_table,MiCourt_Events.pdf
+2025-0000424475-GA-05/01/2025-01,2025-0000424475-GA,05/01/2025,OAF,Order appointing fiduciary,,events_table,MiCourt_Events.pdf
+2025-0000424475-GA-05/20/2025-02,2025-0000424475-GA,05/20/2025,,DISCHARGE PARTY,,events_table,MiCourt_Events.pdf
+2025-0000424475-GA-04/29/2025-01,2025-0000424475-GA,04/29/2025,,Unknown,,events_table,MiCourt_Events.pdf
+2025-0000424475-GA-03/27/2025-01,2025-0000424475-GA,03/27/2025,,Unknown,,events_table,MiCourt_Events.pdf
+2025-0000424475-GA-03/26/2025-01,2025-0000424475-GA,03/26/2025,PGII,Petition filed,,events_table,MiCourt_Events.pdf
+2025-0000424475-GA-03/05/2025-01,2025-0000424475-GA,03/05/2025,,Unknown,,events_table,MiCourt_Events.pdf
+2025-0000424475-GA-03/26/2025-02,2025-0000424475-GA,03/26/2025,POS,Proof of service (other),,events_table,MiCourt_Events.pdf
+2025-0000424475-GA-03/04/2025-01,2025-0000424475-GA,03/04/2025,,MOTION FILED,,events_table,MiCourt_Events.pdf
+2025-0000424475-GA-02/24/2025-01,2025-0000424475-GA,02/24/2025,,ACCEPTANCE OF APPOINTMENT ORDERED,,events_table,MiCourt_Events.pdf
+2025-0000424475-GA-02/19/2025-01,2025-0000424475-GA,02/19/2025,,DISPOSITION SHEET,,events_table,MiCourt_Events.pdf
+2025-0000424475-GA-02/18/2025-01,2025-0000424475-GA,02/18/2025,POS,Proof of service (other),,events_table,MiCourt_Events.pdf
+2025-0000424475-GA-02/14/2025-01,2025-0000424475-GA,02/14/2025,OBJ,Objection filed,,events_table,MiCourt_Events.pdf
+2025-0000424475-GA-01/27/2025-01,2025-0000424475-GA,01/27/2025,POS,Proof of service (other),,events_table,MiCourt_Events.pdf
+2025-0000424475-GA-01/14/2025-01,2025-0000424475-GA,01/14/2025,,Unknown,,events_table,MiCourt_Events.pdf
+2025-0000424475-GA-02/19/2025-02,2025-0000424475-GA,02/19/2025,NOH,Notice of hearing,,events_table,MiCourt_Events.pdf

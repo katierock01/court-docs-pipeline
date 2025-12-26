@@ -1,0 +1,3 @@
+issue_type,case_id,file_name,filed_date,detail
+missing_documents,DEMO-2025-0001,,,No parsed documents for case
+orphan_document,2025-0000424475-GA,MiCourt_Events.txt,01/06/2025,Case not found in cases.csv

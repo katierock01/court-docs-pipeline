@@ -1,0 +1,14 @@
+[
+  {
+    "filename": "Court_Records_Page.txt",
+    "strategy_used": "fallback",
+    "events_found": 1,
+    "warnings": []
+  },
+  {
+    "filename": "MiCourt_Events.txt",
+    "strategy_used": "table",
+    "events_found": 42,
+    "warnings": []
+  }
+]

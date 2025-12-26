@@ -1,0 +1,2 @@
+pdf_name,text_output,pages_processed,pages_failed,avg_confidence,quality_score,total_chars,processing_time,low_conf_pages,low_confidence
+MiCourt_Events.pdf,data\temp_events_text\MiCourt_Events.txt,13,0,91.2,80.0,6887,24.52,,no

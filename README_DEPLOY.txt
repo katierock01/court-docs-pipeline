@@ -27,7 +27,7 @@ Court documents workflow (new)
 - Place source PDFs in court_docs\
 - Run OCR extraction (with progress + quality scores): python ocr_extractor.py --input-dir court_docs --output-dir data\court_docs_text
 - Parse text into CSV: python parse_court_docs.py
-- Audit parsed docs vs cases: python audit_court_docs.py
+- Audit parsed docs vs cases: python audit_court_docs.py  (archives timestamped copies to data\audit_history\ unless you pass --no-archive)
 - OCR log is written to data\ocr_extractor.log; raw text outputs use the same basename as the PDF
 - OCR summary: data\court_docs_ocr_summary.csv; metadata: data\ocr_metadata.json; parsed data: data\court_docs_parsed.csv; audit: data\court_docs_audit.csv
 - Dependencies: pip install pytesseract pdf2image pillow tqdm (plus Tesseract + Poppler binaries on PATH)

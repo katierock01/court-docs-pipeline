@@ -1,0 +1,177 @@
+2025-12-26 15:21:05 [INFO] Starting OCR extraction from court_docs
+2025-12-26 15:21:05 [ERROR] Input directory does not exist: court_docs
+2025-12-26 15:31:04 [INFO] Starting OCR extraction from test_data
+2025-12-26 15:31:04 [WARNING] No PDFs found in test_data
+2025-12-26 15:46:12 [INFO] Starting OCR extraction from court_docs
+2025-12-26 15:46:12 [INFO] Processing Court_Records_Page.pdf
+2025-12-26 15:46:12 [ERROR] Failed to convert PDF court_docs\Court_Records_Page.pdf: Unable to get page count. Is poppler installed and in PATH?
+2025-12-26 15:46:12 [INFO] Finished Court_Records_Page.pdf: pages=0, failed=0, confidence=0.0, quality=0.0, time=0.00s
+2025-12-26 15:46:12 [INFO] Processing MiCourt_Events.pdf
+2025-12-26 15:46:12 [ERROR] Failed to convert PDF court_docs\MiCourt_Events.pdf: Unable to get page count. Is poppler installed and in PATH?
+2025-12-26 15:46:12 [INFO] Finished MiCourt_Events.pdf: pages=0, failed=0, confidence=0.0, quality=0.0, time=0.00s
+2025-12-26 15:47:16 [INFO] Starting OCR extraction from court_docs
+2025-12-26 15:47:16 [INFO] Processing Court_Records_Page.pdf
+2025-12-26 15:47:16 [ERROR] Failed to convert PDF court_docs\Court_Records_Page.pdf: Unable to get page count. Is poppler installed and in PATH?
+2025-12-26 15:47:16 [INFO] Finished Court_Records_Page.pdf: pages=0, failed=0, confidence=0.0, quality=0.0, time=0.00s
+2025-12-26 15:47:16 [INFO] Processing MiCourt_Events.pdf
+2025-12-26 15:47:16 [ERROR] Failed to convert PDF court_docs\MiCourt_Events.pdf: Unable to get page count. Is poppler installed and in PATH?
+2025-12-26 15:47:16 [INFO] Finished MiCourt_Events.pdf: pages=0, failed=0, confidence=0.0, quality=0.0, time=0.00s
+2025-12-26 15:47:16 [INFO] Completed OCR for 2 documents. See data\ocr_extractor.log for details.
+2025-12-26 15:47:30 [INFO] Starting OCR extraction from court_docs
+2025-12-26 15:47:30 [INFO] Processing Court_Records_Page.pdf
+2025-12-26 15:47:30 [ERROR] Failed to convert PDF court_docs\Court_Records_Page.pdf: Unable to get page count. Is poppler installed and in PATH?
+2025-12-26 15:47:30 [INFO] Finished Court_Records_Page.pdf: pages=0, failed=0, confidence=0.0, quality=0.0, time=0.00s
+2025-12-26 15:47:30 [INFO] Processing MiCourt_Events.pdf
+2025-12-26 15:47:30 [ERROR] Failed to convert PDF court_docs\MiCourt_Events.pdf: Unable to get page count. Is poppler installed and in PATH?
+2025-12-26 15:47:30 [INFO] Finished MiCourt_Events.pdf: pages=0, failed=0, confidence=0.0, quality=0.0, time=0.00s
+2025-12-26 15:47:30 [INFO] Completed OCR for 2 documents. See data\ocr_extractor.log for details.
+2025-12-26 15:48:19 [INFO] Starting OCR extraction from court_docs
+2025-12-26 15:48:19 [INFO] Processing Court_Records_Page.pdf
+2025-12-26 15:48:19 [ERROR] Failed to convert PDF court_docs\Court_Records_Page.pdf: Unable to get page count. Is poppler installed and in PATH?
+2025-12-26 15:48:19 [INFO] Finished Court_Records_Page.pdf: pages=0, failed=0, confidence=0.0, quality=0.0, time=0.00s
+2025-12-26 15:48:19 [INFO] Processing MiCourt_Events.pdf
+2025-12-26 15:48:19 [ERROR] Failed to convert PDF court_docs\MiCourt_Events.pdf: Unable to get page count. Is poppler installed and in PATH?
+2025-12-26 15:48:19 [INFO] Finished MiCourt_Events.pdf: pages=0, failed=0, confidence=0.0, quality=0.0, time=0.00s
+2025-12-26 15:48:19 [INFO] Completed OCR for 2 documents. See data\ocr_extractor.log for details.
+2025-12-26 15:48:39 [INFO] Starting OCR extraction from court_docs
+2025-12-26 15:48:39 [INFO] Processing Court_Records_Page.pdf
+2025-12-26 15:48:39 [ERROR] Failed to convert PDF court_docs\Court_Records_Page.pdf: Unable to get page count. Is poppler installed and in PATH?
+2025-12-26 15:48:39 [INFO] Finished Court_Records_Page.pdf: pages=0, failed=0, confidence=0.0, quality=0.0, time=0.00s
+2025-12-26 15:48:39 [INFO] Processing MiCourt_Events.pdf
+2025-12-26 15:48:39 [ERROR] Failed to convert PDF court_docs\MiCourt_Events.pdf: Unable to get page count. Is poppler installed and in PATH?
+2025-12-26 15:48:39 [INFO] Finished MiCourt_Events.pdf: pages=0, failed=0, confidence=0.0, quality=0.0, time=0.00s
+2025-12-26 15:54:33 [INFO] Starting OCR extraction from court_docs
+2025-12-26 15:54:33 [INFO] Processing Court_Records_Page.pdf
+2025-12-26 15:54:33 [ERROR] Failed to convert PDF court_docs\Court_Records_Page.pdf: Unable to get page count. Is poppler installed and in PATH?
+2025-12-26 15:54:33 [INFO] Finished Court_Records_Page.pdf: pages=0, failed=0, confidence=0.0, quality=0.0, time=0.00s
+2025-12-26 15:54:33 [INFO] Processing MiCourt_Events.pdf
+2025-12-26 15:54:33 [ERROR] Failed to convert PDF court_docs\MiCourt_Events.pdf: Unable to get page count. Is poppler installed and in PATH?
+2025-12-26 15:54:33 [INFO] Finished MiCourt_Events.pdf: pages=0, failed=0, confidence=0.0, quality=0.0, time=0.00s
+2025-12-26 15:54:33 [INFO] Completed OCR for 2 documents. See data\ocr_extractor.log for details.
+2025-12-26 16:05:18 [INFO] Starting OCR extraction from court_docs
+2025-12-26 16:05:18 [INFO] Processing Court_Records_Page.pdf
+2025-12-26 16:05:22 [ERROR] Error OCR'ing Court_Records_Page.pdf page 1: tesseract is not installed or it's not in your PATH. See README file for more information.
+2025-12-26 16:05:22 [ERROR] Error OCR'ing Court_Records_Page.pdf page 2: tesseract is not installed or it's not in your PATH. See README file for more information.
+2025-12-26 16:05:22 [ERROR] Error OCR'ing Court_Records_Page.pdf page 3: tesseract is not installed or it's not in your PATH. See README file for more information.
+2025-12-26 16:05:22 [INFO] Finished Court_Records_Page.pdf: pages=0, failed=3, confidence=0.0, quality=0.0, time=3.77s
+2025-12-26 16:05:22 [INFO] Processing MiCourt_Events.pdf
+2025-12-26 16:05:30 [ERROR] Error OCR'ing MiCourt_Events.pdf page 1: tesseract is not installed or it's not in your PATH. See README file for more information.
+2025-12-26 16:05:30 [ERROR] Error OCR'ing MiCourt_Events.pdf page 2: tesseract is not installed or it's not in your PATH. See README file for more information.
+2025-12-26 16:05:30 [ERROR] Error OCR'ing MiCourt_Events.pdf page 3: tesseract is not installed or it's not in your PATH. See README file for more information.
+2025-12-26 16:05:30 [ERROR] Error OCR'ing MiCourt_Events.pdf page 4: tesseract is not installed or it's not in your PATH. See README file for more information.
+2025-12-26 16:05:30 [ERROR] Error OCR'ing MiCourt_Events.pdf page 5: tesseract is not installed or it's not in your PATH. See README file for more information.
+2025-12-26 16:05:30 [ERROR] Error OCR'ing MiCourt_Events.pdf page 6: tesseract is not installed or it's not in your PATH. See README file for more information.
+2025-12-26 16:05:30 [ERROR] Error OCR'ing MiCourt_Events.pdf page 7: tesseract is not installed or it's not in your PATH. See README file for more information.
+2025-12-26 16:05:30 [ERROR] Error OCR'ing MiCourt_Events.pdf page 8: tesseract is not installed or it's not in your PATH. See README file for more information.
+2025-12-26 16:05:30 [ERROR] Error OCR'ing MiCourt_Events.pdf page 9: tesseract is not installed or it's not in your PATH. See README file for more information.
+2025-12-26 16:05:30 [ERROR] Error OCR'ing MiCourt_Events.pdf page 10: tesseract is not installed or it's not in your PATH. See README file for more information.
+2025-12-26 16:05:30 [ERROR] Error OCR'ing MiCourt_Events.pdf page 11: tesseract is not installed or it's not in your PATH. See README file for more information.
+2025-12-26 16:05:30 [ERROR] Error OCR'ing MiCourt_Events.pdf page 12: tesseract is not installed or it's not in your PATH. See README file for more information.
+2025-12-26 16:05:30 [ERROR] Error OCR'ing MiCourt_Events.pdf page 13: tesseract is not installed or it's not in your PATH. See README file for more information.
+2025-12-26 16:05:30 [INFO] Finished MiCourt_Events.pdf: pages=0, failed=13, confidence=0.0, quality=0.0, time=8.09s
+2025-12-26 16:05:50 [INFO] Starting OCR extraction from court_docs
+2025-12-26 16:05:50 [INFO] Processing Court_Records_Page.pdf
+2025-12-26 16:05:51 [DEBUG] ['C:\\Program Files\\Tesseract-OCR\\tesseract.exe', 'C:\\Users\\k8roc\\AppData\\Local\\Temp\\tess_qjun05bl_input.PNG', 'C:\\Users\\k8roc\\AppData\\Local\\Temp\\tess_qjun05bl', '-l', 'eng', '-c', 'tessedit_create_tsv=1']
+2025-12-26 16:05:54 [DEBUG] ['C:\\Program Files\\Tesseract-OCR\\tesseract.exe', 'C:\\Users\\k8roc\\AppData\\Local\\Temp\\tess_3z70keb8_input.PNG', 'C:\\Users\\k8roc\\AppData\\Local\\Temp\\tess_3z70keb8', '-l', 'eng', 'txt']
+2025-12-26 16:05:55 [DEBUG] ['C:\\Program Files\\Tesseract-OCR\\tesseract.exe', 'C:\\Users\\k8roc\\AppData\\Local\\Temp\\tess_y21b8dtj_input.PNG', 'C:\\Users\\k8roc\\AppData\\Local\\Temp\\tess_y21b8dtj', '-l', 'eng', '-c', 'tessedit_create_tsv=1']
+2025-12-26 16:05:55 [DEBUG] ['C:\\Program Files\\Tesseract-OCR\\tesseract.exe', 'C:\\Users\\k8roc\\AppData\\Local\\Temp\\tess_9iqf1f_n_input.PNG', 'C:\\Users\\k8roc\\AppData\\Local\\Temp\\tess_9iqf1f_n', '-l', 'eng', 'txt']
+2025-12-26 16:05:56 [DEBUG] ['C:\\Program Files\\Tesseract-OCR\\tesseract.exe', 'C:\\Users\\k8roc\\AppData\\Local\\Temp\\tess_hkby09j9_input.PNG', 'C:\\Users\\k8roc\\AppData\\Local\\Temp\\tess_hkby09j9', '-l', 'eng', '-c', 'tessedit_create_tsv=1']
+2025-12-26 16:05:56 [DEBUG] ['C:\\Program Files\\Tesseract-OCR\\tesseract.exe', 'C:\\Users\\k8roc\\AppData\\Local\\Temp\\tess_qycz63tz_input.PNG', 'C:\\Users\\k8roc\\AppData\\Local\\Temp\\tess_qycz63tz', '-l', 'eng', 'txt']
+2025-12-26 16:05:57 [INFO] Finished Court_Records_Page.pdf: pages=3, failed=0, confidence=92.7, quality=81.7, time=6.51s
+2025-12-26 16:05:57 [INFO] Processing MiCourt_Events.pdf
+2025-12-26 16:06:07 [DEBUG] ['C:\\Program Files\\Tesseract-OCR\\tesseract.exe', 'C:\\Users\\k8roc\\AppData\\Local\\Temp\\tess_wgqiy1mz_input.PNG', 'C:\\Users\\k8roc\\AppData\\Local\\Temp\\tess_wgqiy1mz', '-l', 'eng', '-c', 'tessedit_create_tsv=1']
+2025-12-26 16:06:08 [DEBUG] ['C:\\Program Files\\Tesseract-OCR\\tesseract.exe', 'C:\\Users\\k8roc\\AppData\\Local\\Temp\\tess_r7focbk7_input.PNG', 'C:\\Users\\k8roc\\AppData\\Local\\Temp\\tess_r7focbk7', '-l', 'eng', 'txt']
+2025-12-26 16:06:09 [DEBUG] ['C:\\Program Files\\Tesseract-OCR\\tesseract.exe', 'C:\\Users\\k8roc\\AppData\\Local\\Temp\\tess_8az5w699_input.PNG', 'C:\\Users\\k8roc\\AppData\\Local\\Temp\\tess_8az5w699', '-l', 'eng', '-c', 'tessedit_create_tsv=1']
+2025-12-26 16:06:09 [DEBUG] ['C:\\Program Files\\Tesseract-OCR\\tesseract.exe', 'C:\\Users\\k8roc\\AppData\\Local\\Temp\\tess__hx7gw0i_input.PNG', 'C:\\Users\\k8roc\\AppData\\Local\\Temp\\tess__hx7gw0i', '-l', 'eng', 'txt']
+2025-12-26 16:06:10 [DEBUG] ['C:\\Program Files\\Tesseract-OCR\\tesseract.exe', 'C:\\Users\\k8roc\\AppData\\Local\\Temp\\tess_s02y6fdg_input.PNG', 'C:\\Users\\k8roc\\AppData\\Local\\Temp\\tess_s02y6fdg', '-l', 'eng', '-c', 'tessedit_create_tsv=1']
+2025-12-26 16:06:11 [DEBUG] ['C:\\Program Files\\Tesseract-OCR\\tesseract.exe', 'C:\\Users\\k8roc\\AppData\\Local\\Temp\\tess_290j7os__input.PNG', 'C:\\Users\\k8roc\\AppData\\Local\\Temp\\tess_290j7os_', '-l', 'eng', 'txt']
+2025-12-26 16:06:11 [DEBUG] ['C:\\Program Files\\Tesseract-OCR\\tesseract.exe', 'C:\\Users\\k8roc\\AppData\\Local\\Temp\\tess_u46v_ywv_input.PNG', 'C:\\Users\\k8roc\\AppData\\Local\\Temp\\tess_u46v_ywv', '-l', 'eng', '-c', 'tessedit_create_tsv=1']
+2025-12-26 16:06:12 [DEBUG] ['C:\\Program Files\\Tesseract-OCR\\tesseract.exe', 'C:\\Users\\k8roc\\AppData\\Local\\Temp\\tess_yj0cft7__input.PNG', 'C:\\Users\\k8roc\\AppData\\Local\\Temp\\tess_yj0cft7_', '-l', 'eng', 'txt']
+2025-12-26 16:06:12 [DEBUG] ['C:\\Program Files\\Tesseract-OCR\\tesseract.exe', 'C:\\Users\\k8roc\\AppData\\Local\\Temp\\tess_r5lzw4nc_input.PNG', 'C:\\Users\\k8roc\\AppData\\Local\\Temp\\tess_r5lzw4nc', '-l', 'eng', '-c', 'tessedit_create_tsv=1']
+2025-12-26 16:06:13 [DEBUG] ['C:\\Program Files\\Tesseract-OCR\\tesseract.exe', 'C:\\Users\\k8roc\\AppData\\Local\\Temp\\tess_eclp4ct3_input.PNG', 'C:\\Users\\k8roc\\AppData\\Local\\Temp\\tess_eclp4ct3', '-l', 'eng', 'txt']
+2025-12-26 16:06:14 [DEBUG] ['C:\\Program Files\\Tesseract-OCR\\tesseract.exe', 'C:\\Users\\k8roc\\AppData\\Local\\Temp\\tess_p_aycl5c_input.PNG', 'C:\\Users\\k8roc\\AppData\\Local\\Temp\\tess_p_aycl5c', '-l', 'eng', '-c', 'tessedit_create_tsv=1']
+2025-12-26 16:06:14 [DEBUG] ['C:\\Program Files\\Tesseract-OCR\\tesseract.exe', 'C:\\Users\\k8roc\\AppData\\Local\\Temp\\tess_ydzmrzro_input.PNG', 'C:\\Users\\k8roc\\AppData\\Local\\Temp\\tess_ydzmrzro', '-l', 'eng', 'txt']
+2025-12-26 16:06:15 [DEBUG] ['C:\\Program Files\\Tesseract-OCR\\tesseract.exe', 'C:\\Users\\k8roc\\AppData\\Local\\Temp\\tess_z8gn8khw_input.PNG', 'C:\\Users\\k8roc\\AppData\\Local\\Temp\\tess_z8gn8khw', '-l', 'eng', '-c', 'tessedit_create_tsv=1']
+2025-12-26 16:06:16 [DEBUG] ['C:\\Program Files\\Tesseract-OCR\\tesseract.exe', 'C:\\Users\\k8roc\\AppData\\Local\\Temp\\tess_rmls8_dh_input.PNG', 'C:\\Users\\k8roc\\AppData\\Local\\Temp\\tess_rmls8_dh', '-l', 'eng', 'txt']
+2025-12-26 16:06:16 [DEBUG] ['C:\\Program Files\\Tesseract-OCR\\tesseract.exe', 'C:\\Users\\k8roc\\AppData\\Local\\Temp\\tess_8l_4ow_y_input.PNG', 'C:\\Users\\k8roc\\AppData\\Local\\Temp\\tess_8l_4ow_y', '-l', 'eng', '-c', 'tessedit_create_tsv=1']
+2025-12-26 16:06:17 [DEBUG] ['C:\\Program Files\\Tesseract-OCR\\tesseract.exe', 'C:\\Users\\k8roc\\AppData\\Local\\Temp\\tess_npjvmhhv_input.PNG', 'C:\\Users\\k8roc\\AppData\\Local\\Temp\\tess_npjvmhhv', '-l', 'eng', 'txt']
+2025-12-26 16:06:18 [DEBUG] ['C:\\Program Files\\Tesseract-OCR\\tesseract.exe', 'C:\\Users\\k8roc\\AppData\\Local\\Temp\\tess_ot_3zpwp_input.PNG', 'C:\\Users\\k8roc\\AppData\\Local\\Temp\\tess_ot_3zpwp', '-l', 'eng', '-c', 'tessedit_create_tsv=1']
+2025-12-26 16:06:19 [DEBUG] ['C:\\Program Files\\Tesseract-OCR\\tesseract.exe', 'C:\\Users\\k8roc\\AppData\\Local\\Temp\\tess_6p28edt5_input.PNG', 'C:\\Users\\k8roc\\AppData\\Local\\Temp\\tess_6p28edt5', '-l', 'eng', 'txt']
+2025-12-26 16:06:19 [DEBUG] ['C:\\Program Files\\Tesseract-OCR\\tesseract.exe', 'C:\\Users\\k8roc\\AppData\\Local\\Temp\\tess_ewueyg_d_input.PNG', 'C:\\Users\\k8roc\\AppData\\Local\\Temp\\tess_ewueyg_d', '-l', 'eng', '-c', 'tessedit_create_tsv=1']
+2025-12-26 16:06:20 [DEBUG] ['C:\\Program Files\\Tesseract-OCR\\tesseract.exe', 'C:\\Users\\k8roc\\AppData\\Local\\Temp\\tess_cwjsr5ok_input.PNG', 'C:\\Users\\k8roc\\AppData\\Local\\Temp\\tess_cwjsr5ok', '-l', 'eng', 'txt']
+2025-12-26 16:06:21 [DEBUG] ['C:\\Program Files\\Tesseract-OCR\\tesseract.exe', 'C:\\Users\\k8roc\\AppData\\Local\\Temp\\tess_n28xm1tz_input.PNG', 'C:\\Users\\k8roc\\AppData\\Local\\Temp\\tess_n28xm1tz', '-l', 'eng', '-c', 'tessedit_create_tsv=1']
+2025-12-26 16:06:22 [DEBUG] ['C:\\Program Files\\Tesseract-OCR\\tesseract.exe', 'C:\\Users\\k8roc\\AppData\\Local\\Temp\\tess_5s6obehf_input.PNG', 'C:\\Users\\k8roc\\AppData\\Local\\Temp\\tess_5s6obehf', '-l', 'eng', 'txt']
+2025-12-26 16:06:23 [DEBUG] ['C:\\Program Files\\Tesseract-OCR\\tesseract.exe', 'C:\\Users\\k8roc\\AppData\\Local\\Temp\\tess_ttfbr2m6_input.PNG', 'C:\\Users\\k8roc\\AppData\\Local\\Temp\\tess_ttfbr2m6', '-l', 'eng', '-c', 'tessedit_create_tsv=1']
+2025-12-26 16:06:24 [DEBUG] ['C:\\Program Files\\Tesseract-OCR\\tesseract.exe', 'C:\\Users\\k8roc\\AppData\\Local\\Temp\\tess_o3drqa2l_input.PNG', 'C:\\Users\\k8roc\\AppData\\Local\\Temp\\tess_o3drqa2l', '-l', 'eng', 'txt']
+2025-12-26 16:06:25 [DEBUG] ['C:\\Program Files\\Tesseract-OCR\\tesseract.exe', 'C:\\Users\\k8roc\\AppData\\Local\\Temp\\tess_qh4ijduk_input.PNG', 'C:\\Users\\k8roc\\AppData\\Local\\Temp\\tess_qh4ijduk', '-l', 'eng', '-c', 'tessedit_create_tsv=1']
+2025-12-26 16:06:26 [DEBUG] ['C:\\Program Files\\Tesseract-OCR\\tesseract.exe', 'C:\\Users\\k8roc\\AppData\\Local\\Temp\\tess_lxuxx9co_input.PNG', 'C:\\Users\\k8roc\\AppData\\Local\\Temp\\tess_lxuxx9co', '-l', 'eng', 'txt']
+2025-12-26 16:06:26 [INFO] Finished MiCourt_Events.pdf: pages=13, failed=0, confidence=91.2, quality=80.0, time=29.60s
+2025-12-26 16:06:26 [INFO] Completed OCR for 2 documents. See data\ocr_extractor.log for details.
+2025-12-26 16:23:35 [INFO] Starting OCR extraction from court_docs
+2025-12-26 16:23:35 [INFO] Processing Court_Records_Page.pdf
+2025-12-26 16:23:36 [DEBUG] ['C:\\Program Files\\Tesseract-OCR\\tesseract.exe', 'C:\\Users\\k8roc\\AppData\\Local\\Temp\\tess_powscssx_input.PNG', 'C:\\Users\\k8roc\\AppData\\Local\\Temp\\tess_powscssx', '-l', 'eng', '-c', 'tessedit_create_tsv=1']
+2025-12-26 16:23:37 [DEBUG] ['C:\\Program Files\\Tesseract-OCR\\tesseract.exe', 'C:\\Users\\k8roc\\AppData\\Local\\Temp\\tess_n1ihxpe9_input.PNG', 'C:\\Users\\k8roc\\AppData\\Local\\Temp\\tess_n1ihxpe9', '-l', 'eng', 'txt']
+2025-12-26 16:23:38 [DEBUG] ['C:\\Program Files\\Tesseract-OCR\\tesseract.exe', 'C:\\Users\\k8roc\\AppData\\Local\\Temp\\tess_qehg1u1y_input.PNG', 'C:\\Users\\k8roc\\AppData\\Local\\Temp\\tess_qehg1u1y', '-l', 'eng', '-c', 'tessedit_create_tsv=1']
+2025-12-26 16:23:39 [DEBUG] ['C:\\Program Files\\Tesseract-OCR\\tesseract.exe', 'C:\\Users\\k8roc\\AppData\\Local\\Temp\\tess_mg651trg_input.PNG', 'C:\\Users\\k8roc\\AppData\\Local\\Temp\\tess_mg651trg', '-l', 'eng', 'txt']
+2025-12-26 16:23:40 [DEBUG] ['C:\\Program Files\\Tesseract-OCR\\tesseract.exe', 'C:\\Users\\k8roc\\AppData\\Local\\Temp\\tess_ptvjdlo5_input.PNG', 'C:\\Users\\k8roc\\AppData\\Local\\Temp\\tess_ptvjdlo5', '-l', 'eng', '-c', 'tessedit_create_tsv=1']
+2025-12-26 16:23:40 [DEBUG] ['C:\\Program Files\\Tesseract-OCR\\tesseract.exe', 'C:\\Users\\k8roc\\AppData\\Local\\Temp\\tess_1s0ualj6_input.PNG', 'C:\\Users\\k8roc\\AppData\\Local\\Temp\\tess_1s0ualj6', '-l', 'eng', 'txt']
+2025-12-26 16:23:41 [INFO] Finished Court_Records_Page.pdf: pages=3, failed=0, confidence=92.7, quality=81.7, time=5.46s
+2025-12-26 16:23:41 [INFO] Processing MiCourt_Events.pdf
+2025-12-26 16:23:49 [DEBUG] ['C:\\Program Files\\Tesseract-OCR\\tesseract.exe', 'C:\\Users\\k8roc\\AppData\\Local\\Temp\\tess_ff38_9lw_input.PNG', 'C:\\Users\\k8roc\\AppData\\Local\\Temp\\tess_ff38_9lw', '-l', 'eng', '-c', 'tessedit_create_tsv=1']
+2025-12-26 16:23:50 [DEBUG] ['C:\\Program Files\\Tesseract-OCR\\tesseract.exe', 'C:\\Users\\k8roc\\AppData\\Local\\Temp\\tess_bsg8r129_input.PNG', 'C:\\Users\\k8roc\\AppData\\Local\\Temp\\tess_bsg8r129', '-l', 'eng', 'txt']
+2025-12-26 16:23:51 [DEBUG] ['C:\\Program Files\\Tesseract-OCR\\tesseract.exe', 'C:\\Users\\k8roc\\AppData\\Local\\Temp\\tess_gf6vcp7g_input.PNG', 'C:\\Users\\k8roc\\AppData\\Local\\Temp\\tess_gf6vcp7g', '-l', 'eng', '-c', 'tessedit_create_tsv=1']
+2025-12-26 16:23:51 [DEBUG] ['C:\\Program Files\\Tesseract-OCR\\tesseract.exe', 'C:\\Users\\k8roc\\AppData\\Local\\Temp\\tess_109l5un0_input.PNG', 'C:\\Users\\k8roc\\AppData\\Local\\Temp\\tess_109l5un0', '-l', 'eng', 'txt']
+2025-12-26 16:23:52 [DEBUG] ['C:\\Program Files\\Tesseract-OCR\\tesseract.exe', 'C:\\Users\\k8roc\\AppData\\Local\\Temp\\tess_y0gkvdwe_input.PNG', 'C:\\Users\\k8roc\\AppData\\Local\\Temp\\tess_y0gkvdwe', '-l', 'eng', '-c', 'tessedit_create_tsv=1']
+2025-12-26 16:23:52 [DEBUG] ['C:\\Program Files\\Tesseract-OCR\\tesseract.exe', 'C:\\Users\\k8roc\\AppData\\Local\\Temp\\tess_dbhzvho1_input.PNG', 'C:\\Users\\k8roc\\AppData\\Local\\Temp\\tess_dbhzvho1', '-l', 'eng', 'txt']
+2025-12-26 16:23:53 [DEBUG] ['C:\\Program Files\\Tesseract-OCR\\tesseract.exe', 'C:\\Users\\k8roc\\AppData\\Local\\Temp\\tess_j_6fzwuh_input.PNG', 'C:\\Users\\k8roc\\AppData\\Local\\Temp\\tess_j_6fzwuh', '-l', 'eng', '-c', 'tessedit_create_tsv=1']
+2025-12-26 16:23:54 [DEBUG] ['C:\\Program Files\\Tesseract-OCR\\tesseract.exe', 'C:\\Users\\k8roc\\AppData\\Local\\Temp\\tess_f6wkuxlz_input.PNG', 'C:\\Users\\k8roc\\AppData\\Local\\Temp\\tess_f6wkuxlz', '-l', 'eng', 'txt']
+2025-12-26 16:23:54 [DEBUG] ['C:\\Program Files\\Tesseract-OCR\\tesseract.exe', 'C:\\Users\\k8roc\\AppData\\Local\\Temp\\tess_v6l3kbe6_input.PNG', 'C:\\Users\\k8roc\\AppData\\Local\\Temp\\tess_v6l3kbe6', '-l', 'eng', '-c', 'tessedit_create_tsv=1']
+2025-12-26 16:23:55 [DEBUG] ['C:\\Program Files\\Tesseract-OCR\\tesseract.exe', 'C:\\Users\\k8roc\\AppData\\Local\\Temp\\tess_ss6vrod9_input.PNG', 'C:\\Users\\k8roc\\AppData\\Local\\Temp\\tess_ss6vrod9', '-l', 'eng', 'txt']
+2025-12-26 16:23:56 [DEBUG] ['C:\\Program Files\\Tesseract-OCR\\tesseract.exe', 'C:\\Users\\k8roc\\AppData\\Local\\Temp\\tess_wr50zj1v_input.PNG', 'C:\\Users\\k8roc\\AppData\\Local\\Temp\\tess_wr50zj1v', '-l', 'eng', '-c', 'tessedit_create_tsv=1']
+2025-12-26 16:23:56 [DEBUG] ['C:\\Program Files\\Tesseract-OCR\\tesseract.exe', 'C:\\Users\\k8roc\\AppData\\Local\\Temp\\tess_3vd68svg_input.PNG', 'C:\\Users\\k8roc\\AppData\\Local\\Temp\\tess_3vd68svg', '-l', 'eng', 'txt']
+2025-12-26 16:23:57 [DEBUG] ['C:\\Program Files\\Tesseract-OCR\\tesseract.exe', 'C:\\Users\\k8roc\\AppData\\Local\\Temp\\tess_o0tia17m_input.PNG', 'C:\\Users\\k8roc\\AppData\\Local\\Temp\\tess_o0tia17m', '-l', 'eng', '-c', 'tessedit_create_tsv=1']
+2025-12-26 16:23:58 [DEBUG] ['C:\\Program Files\\Tesseract-OCR\\tesseract.exe', 'C:\\Users\\k8roc\\AppData\\Local\\Temp\\tess_dvf9xjsx_input.PNG', 'C:\\Users\\k8roc\\AppData\\Local\\Temp\\tess_dvf9xjsx', '-l', 'eng', 'txt']
+2025-12-26 16:23:58 [DEBUG] ['C:\\Program Files\\Tesseract-OCR\\tesseract.exe', 'C:\\Users\\k8roc\\AppData\\Local\\Temp\\tess_y6zc9uke_input.PNG', 'C:\\Users\\k8roc\\AppData\\Local\\Temp\\tess_y6zc9uke', '-l', 'eng', '-c', 'tessedit_create_tsv=1']
+2025-12-26 16:23:59 [DEBUG] ['C:\\Program Files\\Tesseract-OCR\\tesseract.exe', 'C:\\Users\\k8roc\\AppData\\Local\\Temp\\tess_l4snwyd2_input.PNG', 'C:\\Users\\k8roc\\AppData\\Local\\Temp\\tess_l4snwyd2', '-l', 'eng', 'txt']
+2025-12-26 16:24:00 [DEBUG] ['C:\\Program Files\\Tesseract-OCR\\tesseract.exe', 'C:\\Users\\k8roc\\AppData\\Local\\Temp\\tess_sud0zn39_input.PNG', 'C:\\Users\\k8roc\\AppData\\Local\\Temp\\tess_sud0zn39', '-l', 'eng', '-c', 'tessedit_create_tsv=1']
+2025-12-26 16:24:00 [DEBUG] ['C:\\Program Files\\Tesseract-OCR\\tesseract.exe', 'C:\\Users\\k8roc\\AppData\\Local\\Temp\\tess_l2g_k3ew_input.PNG', 'C:\\Users\\k8roc\\AppData\\Local\\Temp\\tess_l2g_k3ew', '-l', 'eng', 'txt']
+2025-12-26 16:24:01 [DEBUG] ['C:\\Program Files\\Tesseract-OCR\\tesseract.exe', 'C:\\Users\\k8roc\\AppData\\Local\\Temp\\tess_0kzwi7ux_input.PNG', 'C:\\Users\\k8roc\\AppData\\Local\\Temp\\tess_0kzwi7ux', '-l', 'eng', '-c', 'tessedit_create_tsv=1']
+2025-12-26 16:24:02 [DEBUG] ['C:\\Program Files\\Tesseract-OCR\\tesseract.exe', 'C:\\Users\\k8roc\\AppData\\Local\\Temp\\tess_vby9732r_input.PNG', 'C:\\Users\\k8roc\\AppData\\Local\\Temp\\tess_vby9732r', '-l', 'eng', 'txt']
+2025-12-26 16:24:02 [DEBUG] ['C:\\Program Files\\Tesseract-OCR\\tesseract.exe', 'C:\\Users\\k8roc\\AppData\\Local\\Temp\\tess_08t5lhap_input.PNG', 'C:\\Users\\k8roc\\AppData\\Local\\Temp\\tess_08t5lhap', '-l', 'eng', '-c', 'tessedit_create_tsv=1']
+2025-12-26 16:24:03 [DEBUG] ['C:\\Program Files\\Tesseract-OCR\\tesseract.exe', 'C:\\Users\\k8roc\\AppData\\Local\\Temp\\tess_3osq72wn_input.PNG', 'C:\\Users\\k8roc\\AppData\\Local\\Temp\\tess_3osq72wn', '-l', 'eng', 'txt']
+2025-12-26 16:24:04 [DEBUG] ['C:\\Program Files\\Tesseract-OCR\\tesseract.exe', 'C:\\Users\\k8roc\\AppData\\Local\\Temp\\tess_v50m7cri_input.PNG', 'C:\\Users\\k8roc\\AppData\\Local\\Temp\\tess_v50m7cri', '-l', 'eng', '-c', 'tessedit_create_tsv=1']
+2025-12-26 16:24:04 [DEBUG] ['C:\\Program Files\\Tesseract-OCR\\tesseract.exe', 'C:\\Users\\k8roc\\AppData\\Local\\Temp\\tess_jjdnucfl_input.PNG', 'C:\\Users\\k8roc\\AppData\\Local\\Temp\\tess_jjdnucfl', '-l', 'eng', 'txt']
+2025-12-26 16:24:05 [DEBUG] ['C:\\Program Files\\Tesseract-OCR\\tesseract.exe', 'C:\\Users\\k8roc\\AppData\\Local\\Temp\\tess_sl72an_u_input.PNG', 'C:\\Users\\k8roc\\AppData\\Local\\Temp\\tess_sl72an_u', '-l', 'eng', '-c', 'tessedit_create_tsv=1']
+2025-12-26 16:24:06 [DEBUG] ['C:\\Program Files\\Tesseract-OCR\\tesseract.exe', 'C:\\Users\\k8roc\\AppData\\Local\\Temp\\tess_hkb3hvwj_input.PNG', 'C:\\Users\\k8roc\\AppData\\Local\\Temp\\tess_hkb3hvwj', '-l', 'eng', 'txt']
+2025-12-26 16:24:06 [INFO] Finished MiCourt_Events.pdf: pages=13, failed=0, confidence=91.2, quality=80.0, time=25.73s
+2025-12-26 16:24:06 [INFO] Completed OCR for 2 documents. See data\ocr_extractor.log for details.
+2025-12-26 17:03:53 [INFO] Starting OCR extraction from temp_events
+2025-12-26 17:03:53 [INFO] Processing MiCourt_Events.pdf
+2025-12-26 17:04:00 [DEBUG] ['C:\\Program Files\\Tesseract-OCR\\tesseract.exe', 'C:\\Users\\k8roc\\AppData\\Local\\Temp\\tess_1fnkavpi_input.PNG', 'C:\\Users\\k8roc\\AppData\\Local\\Temp\\tess_1fnkavpi', '-l', 'eng', '-c', 'tessedit_create_tsv=1']
+2025-12-26 17:04:00 [DEBUG] ['C:\\Program Files\\Tesseract-OCR\\tesseract.exe', 'C:\\Users\\k8roc\\AppData\\Local\\Temp\\tess_z3a65n_g_input.PNG', 'C:\\Users\\k8roc\\AppData\\Local\\Temp\\tess_z3a65n_g', '-l', 'eng', 'txt']
+2025-12-26 17:04:01 [DEBUG] ['C:\\Program Files\\Tesseract-OCR\\tesseract.exe', 'C:\\Users\\k8roc\\AppData\\Local\\Temp\\tess_c6a8iu1v_input.PNG', 'C:\\Users\\k8roc\\AppData\\Local\\Temp\\tess_c6a8iu1v', '-l', 'eng', '-c', 'tessedit_create_tsv=1']
+2025-12-26 17:04:01 [DEBUG] ['C:\\Program Files\\Tesseract-OCR\\tesseract.exe', 'C:\\Users\\k8roc\\AppData\\Local\\Temp\\tess_aqzxszij_input.PNG', 'C:\\Users\\k8roc\\AppData\\Local\\Temp\\tess_aqzxszij', '-l', 'eng', 'txt']
+2025-12-26 17:04:02 [DEBUG] ['C:\\Program Files\\Tesseract-OCR\\tesseract.exe', 'C:\\Users\\k8roc\\AppData\\Local\\Temp\\tess_6xano5kb_input.PNG', 'C:\\Users\\k8roc\\AppData\\Local\\Temp\\tess_6xano5kb', '-l', 'eng', '-c', 'tessedit_create_tsv=1']
+2025-12-26 17:04:02 [DEBUG] ['C:\\Program Files\\Tesseract-OCR\\tesseract.exe', 'C:\\Users\\k8roc\\AppData\\Local\\Temp\\tess_0erdlmrq_input.PNG', 'C:\\Users\\k8roc\\AppData\\Local\\Temp\\tess_0erdlmrq', '-l', 'eng', 'txt']
+2025-12-26 17:04:03 [DEBUG] ['C:\\Program Files\\Tesseract-OCR\\tesseract.exe', 'C:\\Users\\k8roc\\AppData\\Local\\Temp\\tess_a1fou593_input.PNG', 'C:\\Users\\k8roc\\AppData\\Local\\Temp\\tess_a1fou593', '-l', 'eng', '-c', 'tessedit_create_tsv=1']
+2025-12-26 17:04:04 [DEBUG] ['C:\\Program Files\\Tesseract-OCR\\tesseract.exe', 'C:\\Users\\k8roc\\AppData\\Local\\Temp\\tess_r89z_f16_input.PNG', 'C:\\Users\\k8roc\\AppData\\Local\\Temp\\tess_r89z_f16', '-l', 'eng', 'txt']
+2025-12-26 17:04:04 [DEBUG] ['C:\\Program Files\\Tesseract-OCR\\tesseract.exe', 'C:\\Users\\k8roc\\AppData\\Local\\Temp\\tess_66dhurma_input.PNG', 'C:\\Users\\k8roc\\AppData\\Local\\Temp\\tess_66dhurma', '-l', 'eng', '-c', 'tessedit_create_tsv=1']
+2025-12-26 17:04:05 [DEBUG] ['C:\\Program Files\\Tesseract-OCR\\tesseract.exe', 'C:\\Users\\k8roc\\AppData\\Local\\Temp\\tess_wbcgftn8_input.PNG', 'C:\\Users\\k8roc\\AppData\\Local\\Temp\\tess_wbcgftn8', '-l', 'eng', 'txt']
+2025-12-26 17:04:06 [DEBUG] ['C:\\Program Files\\Tesseract-OCR\\tesseract.exe', 'C:\\Users\\k8roc\\AppData\\Local\\Temp\\tess_i2b7f_d3_input.PNG', 'C:\\Users\\k8roc\\AppData\\Local\\Temp\\tess_i2b7f_d3', '-l', 'eng', '-c', 'tessedit_create_tsv=1']
+2025-12-26 17:04:06 [DEBUG] ['C:\\Program Files\\Tesseract-OCR\\tesseract.exe', 'C:\\Users\\k8roc\\AppData\\Local\\Temp\\tess_0c464xhc_input.PNG', 'C:\\Users\\k8roc\\AppData\\Local\\Temp\\tess_0c464xhc', '-l', 'eng', 'txt']
+2025-12-26 17:04:07 [DEBUG] ['C:\\Program Files\\Tesseract-OCR\\tesseract.exe', 'C:\\Users\\k8roc\\AppData\\Local\\Temp\\tess_4johzuyt_input.PNG', 'C:\\Users\\k8roc\\AppData\\Local\\Temp\\tess_4johzuyt', '-l', 'eng', '-c', 'tessedit_create_tsv=1']
+2025-12-26 17:04:08 [DEBUG] ['C:\\Program Files\\Tesseract-OCR\\tesseract.exe', 'C:\\Users\\k8roc\\AppData\\Local\\Temp\\tess_ei76gjtg_input.PNG', 'C:\\Users\\k8roc\\AppData\\Local\\Temp\\tess_ei76gjtg', '-l', 'eng', 'txt']
+2025-12-26 17:04:09 [DEBUG] ['C:\\Program Files\\Tesseract-OCR\\tesseract.exe', 'C:\\Users\\k8roc\\AppData\\Local\\Temp\\tess_pee7ax0j_input.PNG', 'C:\\Users\\k8roc\\AppData\\Local\\Temp\\tess_pee7ax0j', '-l', 'eng', '-c', 'tessedit_create_tsv=1']
+2025-12-26 17:04:10 [DEBUG] ['C:\\Program Files\\Tesseract-OCR\\tesseract.exe', 'C:\\Users\\k8roc\\AppData\\Local\\Temp\\tess_fgyd5hx0_input.PNG', 'C:\\Users\\k8roc\\AppData\\Local\\Temp\\tess_fgyd5hx0', '-l', 'eng', 'txt']
+2025-12-26 17:04:10 [DEBUG] ['C:\\Program Files\\Tesseract-OCR\\tesseract.exe', 'C:\\Users\\k8roc\\AppData\\Local\\Temp\\tess_9kk5iijx_input.PNG', 'C:\\Users\\k8roc\\AppData\\Local\\Temp\\tess_9kk5iijx', '-l', 'eng', '-c', 'tessedit_create_tsv=1']
+2025-12-26 17:04:11 [DEBUG] ['C:\\Program Files\\Tesseract-OCR\\tesseract.exe', 'C:\\Users\\k8roc\\AppData\\Local\\Temp\\tess_3o1hg_c1_input.PNG', 'C:\\Users\\k8roc\\AppData\\Local\\Temp\\tess_3o1hg_c1', '-l', 'eng', 'txt']
+2025-12-26 17:04:12 [DEBUG] ['C:\\Program Files\\Tesseract-OCR\\tesseract.exe', 'C:\\Users\\k8roc\\AppData\\Local\\Temp\\tess_l52fijvw_input.PNG', 'C:\\Users\\k8roc\\AppData\\Local\\Temp\\tess_l52fijvw', '-l', 'eng', '-c', 'tessedit_create_tsv=1']
+2025-12-26 17:04:12 [DEBUG] ['C:\\Program Files\\Tesseract-OCR\\tesseract.exe', 'C:\\Users\\k8roc\\AppData\\Local\\Temp\\tess_amtz9f97_input.PNG', 'C:\\Users\\k8roc\\AppData\\Local\\Temp\\tess_amtz9f97', '-l', 'eng', 'txt']
+2025-12-26 17:04:13 [DEBUG] ['C:\\Program Files\\Tesseract-OCR\\tesseract.exe', 'C:\\Users\\k8roc\\AppData\\Local\\Temp\\tess_dfm13tqt_input.PNG', 'C:\\Users\\k8roc\\AppData\\Local\\Temp\\tess_dfm13tqt', '-l', 'eng', '-c', 'tessedit_create_tsv=1']
+2025-12-26 17:04:14 [DEBUG] ['C:\\Program Files\\Tesseract-OCR\\tesseract.exe', 'C:\\Users\\k8roc\\AppData\\Local\\Temp\\tess_vdxa60l6_input.PNG', 'C:\\Users\\k8roc\\AppData\\Local\\Temp\\tess_vdxa60l6', '-l', 'eng', 'txt']
+2025-12-26 17:04:15 [DEBUG] ['C:\\Program Files\\Tesseract-OCR\\tesseract.exe', 'C:\\Users\\k8roc\\AppData\\Local\\Temp\\tess_bilmtq61_input.PNG', 'C:\\Users\\k8roc\\AppData\\Local\\Temp\\tess_bilmtq61', '-l', 'eng', '-c', 'tessedit_create_tsv=1']
+2025-12-26 17:04:15 [DEBUG] ['C:\\Program Files\\Tesseract-OCR\\tesseract.exe', 'C:\\Users\\k8roc\\AppData\\Local\\Temp\\tess_0k9zbs_m_input.PNG', 'C:\\Users\\k8roc\\AppData\\Local\\Temp\\tess_0k9zbs_m', '-l', 'eng', 'txt']
+2025-12-26 17:04:16 [DEBUG] ['C:\\Program Files\\Tesseract-OCR\\tesseract.exe', 'C:\\Users\\k8roc\\AppData\\Local\\Temp\\tess_my_8k__0_input.PNG', 'C:\\Users\\k8roc\\AppData\\Local\\Temp\\tess_my_8k__0', '-l', 'eng', '-c', 'tessedit_create_tsv=1']
+2025-12-26 17:04:17 [DEBUG] ['C:\\Program Files\\Tesseract-OCR\\tesseract.exe', 'C:\\Users\\k8roc\\AppData\\Local\\Temp\\tess_w7hz73cp_input.PNG', 'C:\\Users\\k8roc\\AppData\\Local\\Temp\\tess_w7hz73cp', '-l', 'eng', 'txt']
+2025-12-26 17:04:17 [INFO] Finished MiCourt_Events.pdf: pages=13, failed=0, confidence=91.2, quality=80.0, time=24.52s
+2025-12-26 17:04:17 [INFO] Completed OCR for 1 documents. See data\ocr_extractor.log for details.

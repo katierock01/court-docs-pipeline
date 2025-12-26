@@ -18,37 +18,48 @@ from typing import List, Dict, Callable, Any, Optional
 
 DATA_DIR = Path("data")
 EVENTS_CSV = DATA_DIR / "case_events_casezero.csv"
-REQUIREMENTS_CSV = DATA_DIR / "policy_requirements_public.csv"
+REQUIREMENTS_PUBLIC_CSV = DATA_DIR / "policy_requirements_public.csv"
+REQUIREMENTS_FULL_CSV = DATA_DIR / "policy_requirements.csv"  # optional internal checks
+PARSED_DOCS_CSV = DATA_DIR / "court_docs_parsed.csv"
+KNOWN_EVENTS_CSV = DATA_DIR / "case_events_casezero.csv"
+
 DEFAULT_CASE_ID = "2025-0000424475-GA"
-CHECKER_VERSION = "v0.2.0"
-COURT_DOCS_PARSED = DATA_DIR / "court_docs_parsed.csv"
+CHECKER_VERSION = "public"  # "public" | "full"
+CHECKER_VERSION_LABEL = "v0.3.0"
 
 # -------------------------------------------------------------------
 # Data loading helpers
 # -------------------------------------------------------------------
 
-def load_events(path: Path) -> List[Dict[str, str]]:
+
+def load_events(path: Path = EVENTS_CSV) -> List[Dict[str, str]]:
     """Load all events into a list of dicts."""
+    if not path.exists():
+        print(f"WARN: Events file not found: {path}")
+        return []
     with path.open(newline="", encoding="utf-8") as f:
         reader = csv.DictReader(f)
         events = list(reader)
     # Normalize dates for sorting
     for ev in events:
-        if ev.get("event_date"):
-            ev["_event_date_obj"] = datetime.datetime.strptime(
-                ev["event_date"], "%Y-%m-%d"
-            ).date()
-        else:
-            ev["_event_date_obj"] = None
+        ev["_event_date_obj"] = parse_event_date(ev.get("event_date", ""))
         # normalize code field name
         if "code" not in ev and "court_code" in ev:
             ev["code"] = ev.get("court_code")
     return events
 
 
-def load_requirements(path: Path) -> List[Dict[str, str]]:
-    """Load all policy requirements; normalize to requirement_id."""
-    with path.open(newline="", encoding="utf-8") as f:
+def load_requirements(version: str = CHECKER_VERSION) -> List[Dict[str, str]]:
+    """
+    Load policy requirements based on version (public/full).
+    Falls back to empty list if the file is missing.
+    """
+    req_path = REQUIREMENTS_PUBLIC_CSV if version == "public" else REQUIREMENTS_FULL_CSV
+    if not req_path.exists():
+        print(f"WARN: Requirements file not found: {req_path}")
+        print("Checker will run reconciliation only.")
+        return []
+    with req_path.open(newline="", encoding="utf-8") as f:
         reader = csv.DictReader(f)
         rows = list(reader)
     for r in rows:
@@ -68,6 +79,18 @@ def now_iso() -> str:
 def build_check_id(case_id: str, requirement_id: str) -> str:
     """Create a stable check_id string for a case/requirement pair."""
     return f"{case_id}-{requirement_id}"
+
+
+def parse_event_date(value: str) -> Optional[datetime.date]:
+    value = (value or "").strip()
+    if not value:
+        return None
+    for fmt in ("%Y-%m-%d", "%m/%d/%Y", "%m/%d/%y"):
+        try:
+            return datetime.datetime.strptime(value, fmt).date()
+        except ValueError:
+            continue
+    return None
 
 
 def select_case_events(events: List[Dict[str, str]], case_id: str) -> List[Dict[str, str]]:
@@ -90,9 +113,11 @@ def extract_event_ids(events: List[Dict[str, str]]) -> List[str]:
     return [ev.get("event_id", "") for ev in events if ev.get("event_id") is not None]
 
 
-def load_parsed_docs(path: Path = COURT_DOCS_PARSED) -> List[Dict[str, str]]:
+def load_parsed_docs(path: Path = PARSED_DOCS_CSV) -> List[Dict[str, str]]:
     """Load parsed court documents if available."""
     if not path.exists():
+        print(f"WARN: Parsed docs file not found: {path}")
+        print("Run: python parse_court_docs.py")
         return []
     with path.open(newline="", encoding="utf-8") as f:
         return list(csv.DictReader(f))
@@ -109,7 +134,53 @@ def summarize_case_docs(case_id: str, docs: List[Dict[str, str]]) -> Dict[str, A
         "case_id": case_id,
         "docs_total": len(filtered),
         "docs_by_type": by_type,
+        "low_confidence_count": sum(1 for d in filtered if d.get("low_confidence") == "yes"),
     }
+
+def check_parsed_vs_known_events(
+    case_id: str,
+    parsed_docs: List[Dict[str, str]],
+    known_events: List[Dict[str, str]],
+) -> Dict[str, Any]:
+    """
+    Compare parsed court documents to known events from case_events_casezero.csv.
+    Flags event codes that appear in one source but not the other.
+    """
+    parsed_codes = set(
+        d.get("event_type_code")
+        for d in parsed_docs
+        if d.get("case_number") == case_id and d.get("event_type_code")
+    )
+
+    known_codes = set(
+        e.get("code")
+        for e in known_events
+        if e.get("case_id") == case_id and e.get("code")
+    )
+
+    missing_in_parsed = known_codes - parsed_codes
+    extra_in_parsed = parsed_codes - known_codes
+
+    return {
+        "case_id": case_id,
+        "parsed_event_count": len([d for d in parsed_docs if d.get("case_number") == case_id]),
+        "known_event_count": len([e for e in known_events if e.get("case_id") == case_id]),
+        "parsed_codes": sorted(parsed_codes),
+        "known_codes": sorted(known_codes),
+        "matched_codes": sorted(parsed_codes & known_codes),
+        "missing_in_parsed": sorted(missing_in_parsed),
+        "extra_in_parsed": sorted(extra_in_parsed),
+        "match_rate": f"{len(parsed_codes & known_codes)}/{len(known_codes) or 1}",
+        "match_percentage": round(100 * len(parsed_codes & known_codes) / len(known_codes), 1) if known_codes else 0.0,
+    }
+
+def load_known_events(path: Path = DATA_DIR / "case_events_casezero.csv") -> List[Dict[str, str]]:
+    """Load case_events_casezero.csv for comparison."""
+    if not path.exists():
+        print(f"WARN: Known events file not found: {path}")
+        return []
+    with path.open(newline="", encoding="utf-8") as f:
+        return list(csv.DictReader(f))
 
 # -------------------------------------------------------------------
 # Checks
@@ -268,6 +339,7 @@ CHECK_REGISTRY: Dict[str, CheckFunc] = {
     "PR01": check_PR01,
     "PR02": check_PR02,
     "PR03": check_PR03,
+    # Additional checks populated below
 }
 
 
@@ -275,8 +347,12 @@ def run_checks_for_case(case_id: str,
                         events: List[Dict[str, str]],
                         requirements: List[Dict[str, str]]) -> List[Dict[str, Any]]:
     """Run all implemented checks for a single case_id."""
-    case_events = select_case_events(events, case_id)
     results: List[Dict[str, Any]] = []
+
+    if not requirements:
+        return results
+
+    case_events = select_case_events(events, case_id)
 
     for req in requirements:
         req_id = req.get("requirement_id")
@@ -297,6 +373,7 @@ def run_checks_for_case(case_id: str,
 def write_results_to_csv(results: List[Dict[str, Any]], path: Path) -> None:
     """Write check results to a CSV with the checks_results schema."""
     if not results:
+        print("   (No results to write)")
         return
 
     fieldnames = [
@@ -323,31 +400,73 @@ def write_results_to_csv(results: List[Dict[str, Any]], path: Path) -> None:
 # -------------------------------------------------------------------
 
 def main(case_id: str = DEFAULT_CASE_ID) -> None:
-    events = load_events(EVENTS_CSV)
-    requirements = load_requirements(REQUIREMENTS_CSV)
-    results = run_checks_for_case(case_id, events, requirements)
+    """Run checker with reconciliation."""
+    print("Oakland County Guardianship Records Checker")
+    print(f"Case: {case_id}")
+    print(f"Mode: {CHECKER_VERSION} (requirements)")
+    print()
+
+    events = load_events()
+    requirements = load_requirements(version=CHECKER_VERSION)
     parsed_docs = load_parsed_docs()
-    doc_summary = summarize_case_docs(case_id, parsed_docs)
+    known_events = load_known_events()
 
-    for r in results:
-        print("-----")
-        for key, value in r.items():
-            print(f"{key}: {value}")
+    # Policy checks
+    if requirements:
+        print("Policy Checks")
+        print("=" * 60)
+        results = run_checks_for_case(case_id, events, requirements)
+        for r in results:
+            status_icon = "[OK]" if r.get("status") in ("Met", "pass") else "[X]"
+            message = r.get("timing_notes") or r.get("evidence_notes") or ""
+            print(f"{status_icon} {r.get('requirement_id', '')}: {r.get('status', '')}")
+            if r.get("status") not in ("Met", "pass") and message:
+                print(f"   {message}")
+        print()
+    else:
+        results = []
 
-    print("-----")
-    print("Court document summary:")
+    # Document summary
     if parsed_docs:
-        print(f"Documents for {case_id}: {doc_summary['docs_total']}")
+        print("Document Summary")
+        print("=" * 60)
+        doc_summary = summarize_case_docs(case_id, parsed_docs)
+        print(f"Total documents: {doc_summary['docs_total']}")
         if doc_summary["docs_by_type"]:
             print("By type:")
-            for dtype, count in doc_summary["docs_by_type"].items():
-                print(f"  {dtype}: {count}")
-    else:
-        print("Parsed court documents not found. Run ocr_extractor.py and parse_court_docs.py.")
+            for dtype, count in sorted(doc_summary["docs_by_type"].items()):
+                print(f"  - {dtype}: {count}")
+        if doc_summary["low_confidence_count"] > 0:
+            print(f"Low confidence: {doc_summary['low_confidence_count']} docs")
+        print()
 
-    output_csv = DATA_DIR / "checks_results_example.csv"
-    write_results_to_csv(results, output_csv)
+    # Reconciliation
+    if parsed_docs and known_events:
+        print("Reconciliation: Parsed vs. Known Events")
+        print("=" * 60)
+        reconciliation = check_parsed_vs_known_events(case_id, parsed_docs, known_events)
+        print(f"Parsed events: {reconciliation.get('parsed_event_count', 0)}")
+        print(f"Known events:  {reconciliation.get('known_event_count', 0)}")
+        print(f"Match rate:    {reconciliation.get('match_rate', '0/0')} ({reconciliation.get('match_percentage', 0)}%)")
+        print()
+        if reconciliation.get("matched_codes"):
+            print(f"Matched codes: {', '.join(reconciliation['matched_codes'])}")
+        if reconciliation.get("missing_in_parsed"):
+            print(f"Missing in parsed: {', '.join(reconciliation['missing_in_parsed'])}")
+            print("   In known events list but not found in parsed docs")
+        if reconciliation.get("extra_in_parsed"):
+            print(f"Extra in parsed: {', '.join(reconciliation['extra_in_parsed'])}")
+            print("   Parsed from documents but not in known events list")
+        print()
+
+    # Write results
+    if requirements:
+        output_csv = DATA_DIR / "checks_results_example.csv"
+        write_results_to_csv(results, output_csv)
+        print(f"Results saved to: {output_csv}")
 
 
 if __name__ == "__main__":
-    main()
+    import sys
+    target_case = sys.argv[1] if len(sys.argv) > 1 else DEFAULT_CASE_ID
+    main(target_case)

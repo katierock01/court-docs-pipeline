@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Court Docs Pipeline | EmpathTech</title>
+    <!-- CSS: Pointing up one level to the repo's CSS folder -->
+    <link rel="stylesheet" href="../css/6420-final.css">
+    <style>
+        /* Minimal overrides for landing page layout */
+        .landing-container {
+            max-width: 800px;
+            margin: 4rem auto;
+            padding: 2rem;
+            text-align: center;
+        }
+        .hero-buttons {
+            margin-top: 2rem;
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+        }
+        .btn {
+            display: inline-block;
+            padding: 0.75rem 1.5rem;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background-color 0.2s;
+            background-color: #003366; /* Fallback */
+            color: white;
+        }
+        .btn-secondary {
+            background-color: #f0f0f0;
+            color: #333;
+            border: 1px solid #ccc;
+        }
+        .pipeline-steps {
+            display: flex;
+            justify-content: space-between;
+            margin: 3rem 0;
+            text-align: left;
+        }
+        .step {
+            flex: 1;
+            padding: 1rem;
+            background: #f9f9f9;
+            margin: 0 0.5rem;
+            border-radius: 4px;
+            border-left: 4px solid #ff6b6b; /* Fallback accent */
+        }
+    </style>
+</head>
+<body>
+    <div class="landing-container card">
+        <h1>Court Docs Pipeline</h1>
+        <p class="lead">Automated parsing, auditing, and verification for Michigan Probate Court documents.</p>
+        
+        <div class="pipeline-steps">
+            <div class="step">
+                <strong>1. Ingest</strong><br>
+                Reads raw text/PDFs from court records.
+            </div>
+            <div class="step">
+                <strong>2. Parse</strong><br>
+                Extracts events using hybrid table/regex logic.
+            </div>
+            <div class="step">
+                <strong>3. Audit</strong><br>
+                Validates against Case Zero Contract (ID: 2025-0000424475-GA).
+            </div>
+        </div>
+
+        <div class="hero-buttons">
+            <a href="dashboard.html" class="btn btn-primary">Open Dashboard</a>
+            <a href="https://github.com/EmpathTech/court-docs-pipeline" class="btn btn-secondary">View Repository</a>
+        </div>
+        
+        <p style="margin-top: 2rem; font-size: 0.9rem; color: #666;">
+            Built by EmpathTech Agents (Architect, Builder, Analyst).
+        </p>
+    </div>
+</body>
+</html>

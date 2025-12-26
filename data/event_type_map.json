@@ -1,0 +1,17 @@
+{
+  "PETITION": "PGII",
+  "NOTICE": "NOH",
+  "PROOF": "POS",
+  "ORDER": "OAF",
+  "LETTER": "LET",
+  "OBJECTION": "OBJ",
+  "REPORT": "GAR",
+  "MOTION": "MOT",
+  "INVENTORY": "INV",
+  "ACCOUNT": "ACC",
+  "WAIVER": "WAV",
+  "CONSENT": "CON",
+  "APPEARANCE": "APP",
+  "WILL": "WIL",
+  "TESTIMONY": "TST"
+}

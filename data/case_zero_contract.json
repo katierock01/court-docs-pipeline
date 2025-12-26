@@ -1,0 +1,21 @@
+{
+  "case_id": "2025-0000424475-GA",
+  "min_events": 42,
+  "required_codes": [
+    "PGII",
+    "NOH",
+    "POS",
+    "OAF",
+    "LET"
+  ],
+  "quality_thresholds": {
+    "date_validity_percent": 95.0,
+    "max_duplicate_rows": 5
+  },
+  "expected_artifacts": [
+    "court_docs_parsed.csv",
+    "court_docs_audit.csv",
+    "parse_report.json",
+    "unknown_event_types.csv"
+  ]
+}

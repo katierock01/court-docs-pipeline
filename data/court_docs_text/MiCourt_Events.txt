@@ -1,0 +1,666 @@
+
+=== Page 1 ===
+Case Details
+
+Case ID
+2025-0000424475-GA
+
+Case Entitlement
+
+SHERYL OSOWSKI
+
+Judge of Record
+RICHARDS, TRACI,
+
+Date Filed
+01/06/2025
+
+Case Status
+DISPOSED
+
+Closed Date
+
+Balance
+
+Parties (5)
+
+Party Name
+
+Age
+73 (1952)
+
+Attorney Name
+THOMAS J. LANGAN
+
+Alternate Name(s)
+Answer Date
+Service Date
+Disposition
+GRANTED
+
+Disposition Date
+
+02/24/2025
+
+Party Name
+
+Court Location
+
+Additional Resources Y¥
+
+Oakland County Probate Court - Pontiac
+
+Party Type/Number
+WARD - 1
+
+Party Type/Number
+GUARDIAN - 1
+
+
+=== Page 2 ===
+Attorney Name
+Alternate Name(s)
+Answer Date
+Service Date
+Disposition
+
+Disposition Date
+
+Party Action(s)
+
+Category Action
+PARTY ACTION LETTERS OF
+AUTHORITY
+DISCHARGE PROBATE DISCHARGE PARTY
+PARTY
+Party Name
+
+Attorney Name
+Alternate Name(s)
+Answer Date
+Service Date
+Disposition
+
+Disposition Date
+
+Probate
+Guardianship Review Type
+Guardianship Review Date
+
+Inventory Date
+
+10/02/2025
+
+Inventory Amount
+$86,635.55
+
+Action Due
+Date
+
+Action
+Date
+
+05/01/2025
+
+05/01/2025
+
+Party Type/Number
+GUARDIAN - 2
+
+
+=== Page 3 ===
+Qualification Document
+
+ACCEPTANCE OF APPOINTMENT
+
+Qualification Date
+
+05/01/2025
+
+Due Date
+
+Party Action(s)
+
+Category Action
+INVENTORY INVENTORY FILED
+FILED
+
+PARTY ACTION =ACCEPTANCE OF
+APPOINTMENT
+
+QUALIFICATION ACCEPTANCE OF
+APPOINTMENT
+
+Party Name
+
+Attorney Name
+Alternate Name(s)
+Answer Date
+Service Date
+Disposition
+
+Disposition Date
+
+Party Name
+
+Attorney Name
+Alternate Name(s)
+Answer Date
+
+Service Date
+
+Action Action Due
+Date Date
+10/02/2025
+
+05/01/2025
+
+05/01/2025
+
+Party Type/Number
+INTERESTED PERSON - 1
+
+Party Type/Number
+INTERESTED PERSON - 2
+
+
+=== Page 4 ===
+Disposition
+
+Disposition Date
+Bonds (0)
+Hearings (0)
+Financial Orders (0)
+
+Events (42)
+
+[=] =)
+
+Event Date
+
+10/02/2025
+Description
+INVENTORY FILED
+
+Party/Count
+GDN2
+
+Judge
+RICHARDS, TRACI,
+
+Attorney
+BUSSELL,LACHELLE ,
+
+Amount
+
+$86,635.55
+
+Event Date
+
+07/09/2025
+
+Description
+LETTERS OF GUARDIANSHIP
+
+Event No./Clerk
+43 - KP
+
+
+=== Page 5 ===
+Party/Count
+GDN2
+
+Comment
+
+LETTERS OF GUARDIANSHIP amended
+
+Judge
+RICHARDS, TRACI,
+
+Event Date
+
+06/18/2025
+Description
+PROOF OF SERVICE
+
+Party/Count
+
+Comment
+PROOF OF ELECTRONIC SERVICE
+
+Judge
+RICHARDS, TRACI,
+
+Attorney
+BUSSELL,LACHELLE ,
+
+Event Date
+
+06/09/2025
+
+Description
+SET CASE ON CALENDAR
+
+Party/Count
+
+Judge
+RICHARDS, TRACI,
+
+Next Hearing
+06/27/2025 11:30 AM - HEARING
+Hearing Officer - RICHARDS,TRACI,
+Location - 2E
+
+Program/Results
+CONTESTED MATTER
+
+Description
+PROOF OF SERVICE
+
+Event No./Clerk
+42
+
+Event No./Clerk
+41
+
+Event No./Clerk
+38 - WA
+
+
+=== Page 6 ===
+Party/Count Event No./Clerk
+39 - WA
+
+Comment
+NOH
+Description
+NOTICE OF HEARING
+
+Party/Count Event No./Clerk
+40 - WA
+
+Event Date
+
+06/06/2025
+Description
+ORDER APPOINTING ATTORNEY
+
+Party/Count Event No./Clerk
+HDR1 37-WA
+
+Judge
+RICHARDS, TRACI,
+
+Attorney
+LANGAN,THOMAS J.,
+
+Event Date
+05/20/2025
+
+Description
+MISCELLANEOUS DOCUMENT FILED
+
+Party/Count Event No./Clerk
+34 - JAR
+
+Comment
+COVER LETTER
+
+Description
+MOTION FILED
+
+Party/Count Event No./Clerk
+35 - JAR
+
+Comment
+
+EMERG MOT TO STAY
+
+
+=== Page 7 ===
+Event Date
+
+05/19/2025
+Description
+MOTION FILED
+
+Party/Count Event No./Clerk
+33 - TB
+
+Event Date
+
+05/01/2025
+Description
+ORDER REGARDING APPOINTMENT OF GUARDIAN/CONSERVATOR
+Party/Count Event No./Clerk
+26 - KW
+
+Description
+SET CASE ON CALENDAR
+
+Party/Count Event No./Clerk
+27-KW
+Judge
+RICHARDS, TRACI,
+
+Next Hearing
+05/20/2025 10:30 AM - HEARING TO APPOINT ADULT GUARDIAN
+Hearing Officer - RICHARDS,TRACI,
+Location - 2E
+
+Description
+DISCHARGE PARTY
+
+Party/Count Event No./Clerk
+GDN1 28 - KW
+Judge
+RICHARDS, TRACI,
+Description
+
+LETTERS OF AUTHORITY
+
+Party/Count Event No./Clerk
+GDN1 29 - KW
+
+
+=== Page 8 ===
+Description
+ADDENDUM TO PROTECTED PERSONAL IDENTIFYING INFORMATION
+
+Party/Count Event No./Clerk
+30 - KW
+
+Description
+ACCEPTANCE OF APPOINTMENT
+
+Party/Count Event No./Clerk
+GDN2 31 -KW
+Event Date
+
+04/29/2025
+
+Description
+
+DISPOSITION SHEET
+
+Party/Count Event No./Clerk
+32 - KW
+Event Date
+03/27/2025
+Description
+
+PROOF OF SERVICE
+
+Party/Count Event No./Clerk
+22 -1TB
+
+Comment
+
+ORD DENYING FILINGS
+Description
+
+PROOF OF SERVICE
+
+Party/Count Event No./Clerk
+23 - TB
+
+Comment
+
+ORD DENYING FILINGS
+
+Event Date
+03/26/2025
+
+
+=== Page 9 ===
+Description
+ORDER DENYING PETITION
+
+Party/Count Event No./Clerk
+24 - 1B
+
+Comment
+
+DENYING FILINGS
+
+Description
+DISPOSITION SHEET
+
+Party/Count Event No./Clerk
+25-TB
+Event Date
+03/05/2025
+Description
+
+NOTICE OF HEARING
+
+Party/Count Event No./Clerk
+18 - CMW
+Judge
+RICHARDS, TRACI,
+
+Next Hearing
+03/26/2025 8:30 AM - MOTION HEARING
+Hearing Officer - RICHARDS,TRACI,
+Location - 2E
+Comment - STAY GDNSHP;REQ FORENSIC AUDIT; ADA ACCOMMOD;RELEASE OF
+FUNDS
+
+Description
+PROOF OF SERVICE
+
+Party/Count Event No./Clerk
+19 - CMW
+
+Comment
+
+MOT;NOH
+Judge
+RICHARDS, TRACI,
+Description
+DISPOSITION SHEET
+
+Party/Count Event No./Clerk
+
+
+=== Page 10 ===
+20 - CMW
+Judge
+RICHARDS, TRACI,
+Description
+ORDER DENYING PETITION
+
+Party/Count Event No./Clerk
+21 - CMW
+
+Comment
+MOTION TO STAY GDNSHP,REQ FORENSIC AUDIT;ADA ACCOMM>;:FEE WAIVER
+
+Judge
+RICHARDS, TRACI,
+
+Event Date
+03/04/2025
+
+Description
+MOTION FILED
+
+Party/Count Event No./Clerk
+17 - CMW
+
+Comment
+EMERG FILING ON BEHALF OF WARD - NO EMERG PTN REQUIRED
+
+Judge
+RICHARDS, TRACI,
+
+Event Date
+02/24/2025
+
+Description
+ACCEPTANCE OF APPOINTMENT ORDERED
+
+Party/Count Event No./Clerk
+GDN1 11 - TB
+Judge
+RICHARDS, TRACI,
+Description
+
+CORPORATE BOND ORDERED
+
+Party/Count Event No./Clerk
+GDN1 12 - TB
+
+
+=== Page 11 ===
+Comment
+
+$102,000
+Judge
+
+RICHARDS, TRACI,
+Description
+
+PROOF OF SERVICE
+
+Party/Count
+
+Description
+ORDER APPOINTING FIDUCIARY
+
+Party/Count
+HDR1
+
+Disposition
+GRANTED
+
+Description
+REPORT OF GUARDIAN AD LITEM
+
+Party/Count
+
+Event Date
+
+02/19/2025
+
+Description
+DISPOSITION SHEET
+
+Party/Count
+
+Event Date
+
+02/18/2025
+
+Description
+PROOF OF SERVICE
+
+Party/Count
+
+Comment
+
+OBJECTION TO PTN FILED BY TOWNSEND
+
+Judge
+
+Event No./Clerk
+13 - MF
+
+Event No./Clerk
+14 - MF
+
+Event No./Clerk
+16 - MF
+
+Event No./Clerk
+15 - MF
+
+Event No./Clerk
+10-AJ
+
+
+=== Page 12 ===
+RICHARDS, TRACI,
+
+Event Date
+02/14/2025
+
+Description
+OBJECTION
+Party/Count Event No./Clerk
+9 - MF
+
+Comment
+
+OBJECTION TO PETITION FOR GUARDIANSHIP FILED BY PROPOSED WARD
+
+Judge
+RICHARDS,TRACI,
+
+Event Date
+01/27/2025
+
+Description
+PROOF PERSONAL SERVICE
+Party/Count Event No./Clerk
+7-KW
+Comment
+NOH/PTN FOR APPT OF GDN
+Judge
+RICHARDS, TRACI,
+Description
+MISCELLANEOUS DOCUMENT FILED
+Party/Count Event No./Clerk
+8 - KW
+Comment
+
+LETTER FROM FRANCINE TOWNSEND
+
+Judge
+RICHARDS, TRACI,
+
+Event Date
+
+01/14/2025
+
+Description
+
+
+=== Page 13 ===
+ORDER APPOINTING GUARDIAN AD LITEM
+
+Party/Count Event No./Clerk
+6- TB
+Event Date
+01/06/2025
+Description
+
+SET CASE ON CALENDAR
+
+Party/Count Event No./Clerk
+1-TB
+Judge
+RICHARDS,TRACI,
+
+Next Hearing
+02/19/2025 8:30 AM - HEARING TO APPOINT ADULT GUARDIAN
+Hearing Officer - RICHARDS,TRACI,
+Location - 2E
+
+Description
+NOTICE OF HEARING
+Party/Count Event No./Clerk
+2-T1B
+Description
+PETITION FOR APPOINTMENT OF GUARDIAN OF INCAPACITATED INDIVIDUAL
+Party/Count Event No./Clerk
+3-TB
+Description
+PROTECTED PERSONAL IDENTIFYING INFORMATION
+Party/Count Event No./Clerk
+4-TB
+Description
+MEDICAL RECORD FILED
+
+Party/Count Event No./Clerk
+5 - 1B

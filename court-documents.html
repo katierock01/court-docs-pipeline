@@ -139,17 +139,56 @@
 
   <section class="card">
     <h2>Data quality warnings</h2>
-    <p>Audit findings from <code>data/court_docs_audit.csv</code> (missing cases, orphans, duplicates, date conflicts).</p>
+    <div class="stat-grid" role="list">
+      <article class="stat-card" role="listitem">
+        <span class="stat-label">Total Issues</span>
+        <span class="stat-value" id="audit-issue-count">0</span>
+      </article>
+      <article class="stat-card" role="listitem">
+        <span class="stat-label">Orphan Docs</span>
+        <span class="stat-value" id="audit-orphan-count">0</span>
+      </article>
+      <article class="stat-card" role="listitem">
+        <span class="stat-label">Clean Cases</span>
+        <span class="stat-value" id="audit-clean-count">0</span>
+      </article>
+    </div>
     <ul id="audit-list" class="spacious-list">
       <li>Loading audit findings...</li>
     </ul>
   </section>
 
   <section class="card">
+    <div class="card-header">
+      <h2>Parser Health</h2>
+    </div>
+    <div class="stat-grid" style="margin-bottom: 1rem;">
+      <div class="stat-card">
+        <div class="stat-value" id="parser-files-count">0</div>
+        <div class="stat-label">Files Parsed</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-value" id="parser-table-count">0</div>
+        <div class="stat-label">Table Mode</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-value" id="parser-fallback-count">0</div>
+        <div class="stat-label">Fallback Mode</div>
+      </div>
+    </div>
+    <div class="card-header">
+      <h3>Parser Warnings</h3>
+    </div>
+    <ul id="parser-warnings-list" class="audit-list">
+      <li>Loading parser report...</li>
+    </ul>
+  </section>
+
+  <section class="card">
     <h2>How to run the pipeline</h2>
     <ol>
-      <li><strong>OCR PDFs</strong> — <code>python ocr_extractor.py --input-dir court_docs --output-dir data/court_docs_text</code></li>
-      <li><strong>Parse text to CSV</strong> — <code>python parse_court_docs.py</code></li>
+      <li><strong>OCR PDFs</strong> - <code>python ocr_extractor.py --input-dir court_docs --output-dir data/court_docs_text</code></li>
+      <li><strong>Parse text to CSV</strong> - <code>python parse_court_docs.py</code></li>
       <li><strong>Audit for gaps</strong> — <code>python audit_court_docs.py</code></li>
       <li><strong>Re-run checks</strong> — <code>python checker.py</code> (shows court document counts per case)</li>
     </ol>
