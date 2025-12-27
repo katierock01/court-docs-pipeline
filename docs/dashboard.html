@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Court Documents - Guardianship Navigator</title>
+<title>Court Documents - GARS Pipeline</title>
   <link rel="stylesheet" href="css/6420-final.css">
   <script src="js/6420-final.js" defer></script>
 </head>
@@ -16,29 +16,14 @@
   <div class="container">
     <div class="nav-row">
       <div class="brand">
-        <h1>Oakland Guardianship Navigator</h1>
-        <p>INF 6420 Final - Katie Rock - <a href="mailto:fn9575@wayne.edu">fn9575@wayne.edu</a></p>
-        <span class="badge">Court document tracker</span>
+        <h1>GARS Court Docs Pipeline</h1>
+        <p><span class="badge">Automated Parse → Audit → Verify</span></p>
       </div>
-
-      <button class="menu-toggle"
-              type="button"
-              aria-controls="site-nav"
-              aria-expanded="false">
-        Menu
-      </button>
-
       <nav id="site-nav" class="site-nav" aria-label="Site navigation">
         <ul>
-          <li><a href="6420final-index.html">Home</a></li>
-          <li><a href="casezero-storyboard.html">Case Zero Storyboard</a></li>
-          <li><a href="timeline-matrix.html">Timeline Matrix</a></li>
-          <li><a href="reform-hub.html">Reform Hub</a></li>
-          <li><a href="actions-and-resources.html">Actions &amp; Resources</a></li>
-          <li><a href="feedback.html">Feedback</a></li>
-          <li><a href="methods-inf6420.html">Methods</a></li>
-          <li><a href="final-reflection.html">Final Reflection</a></li>
-          <li><a href="court-documents.html" aria-current="page">Court Documents</a></li>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="dashboard.html" aria-current="page">Dashboard</a></li>
+          <li><a href="https://github.com/katierock01/court-docs-pipeline" target="_blank">Repository ↗</a></li>
         </ul>
       </nav>
     </div>
@@ -50,15 +35,14 @@
     <p class="kicker">New</p>
     <h2 id="page-title">Court document pipeline</h2>
     <p>
-      Track scanned filings end-to-end: OCR, parse, validate against cases, and surface data quality risks.
-      Outputs stay in <code>data/</code> for the Python checks and this dashboard.
+      Automated guardianship document pipeline: OCR → Parse → Audit → Verify, with Case Zero contract checks baked in.
+      Outputs stay in <code>data/</code> (and mirrored to <code>docs/data/</code> for this dashboard).
     </p>
     <div class="callout" role="note" aria-label="Steps">
       <ol>
-        <li>Place PDFs in <code>court_docs/</code></li>
-        <li>Run OCR: <code>python ocr_extractor.py --input-dir court_docs --output-dir data/court_docs_text</code></li>
-        <li>Parse: <code>python parse_court_docs.py</code></li>
-        <li>Audit: <code>python audit_court_docs.py</code></li>
+        <li>Run pipeline: <code>python run_pipeline.py</code></li>
+        <li>Publish for Pages: <code>python publish_data.py</code></li>
+        <li>View dashboard (this page) and data in <code>docs/data/</code></li>
       </ol>
     </div>
   </section>
