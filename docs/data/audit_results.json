@@ -1,0 +1,26 @@
+{
+  "issues": [
+    {
+      "type": "duplicate_filing",
+      "case_number": "2025-0000424475-GA",
+      "file_name": "",
+      "filed_date": "03/27/2025",
+      "message": "2 documents with type/date combination (Unknown 03/27/2025)"
+    },
+    {
+      "type": "duplicate_filing",
+      "case_number": "2025-0000424475-GA",
+      "file_name": "",
+      "filed_date": "03/05/2025",
+      "message": "2 documents with type/date combination (Unknown 03/05/2025)"
+    },
+    {
+      "type": "duplicate_filing",
+      "case_number": "2025-0000424475-GA",
+      "file_name": "",
+      "filed_date": "02/18/2025",
+      "message": "2 documents with type/date combination (Unknown 02/18/2025)"
+    }
+  ],
+  "clean_cases_count": 0
+}

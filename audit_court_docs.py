@@ -15,6 +15,7 @@ Outputs:
 import argparse
 import csv
 import datetime as dt
+import json
 import shutil
 from collections import Counter, defaultdict
 from pathlib import Path
@@ -23,6 +24,7 @@ from typing import Dict, List
 PARSED_CSV = Path("data") / "court_docs_parsed.csv"
 CASES_CSV = Path("data") / "cases.csv"
 OUTPUT_CSV = Path("data") / "court_docs_audit.csv"
+OUTPUT_JSON = Path("data") / "audit_results.json"
 TIMESTAMPED_OUTPUT = Path("data") / "audit_history"
 
 
@@ -145,7 +147,12 @@ def audit(parsed: List[Dict[str, str]], cases: Dict[str, Dict[str, str]]) -> Lis
     return issues
 
 
-def write_issues(issues: List[Dict[str, str]], output: Path, timestamp: bool = True) -> None:
+def write_issues(
+    issues: List[Dict[str, str]],
+    output: Path,
+    timestamp: bool = True,
+    parsed_cases: int = 0,
+) -> None:
     fieldnames = ["issue_type", "case_id", "file_name", "filed_date", "detail"]
     output.parent.mkdir(parents=True, exist_ok=True)
 
@@ -155,6 +162,25 @@ def write_issues(issues: List[Dict[str, str]], output: Path, timestamp: bool = T
         writer.writeheader()
         for row in issues:
             writer.writerow(row)
+
+    # Write JSON companion for dashboards
+    clean_cases_count = max(parsed_cases - len({i["case_id"] for i in issues if i.get("case_id")}), 0)
+    payload = {
+        "issues": [
+            {
+                "type": row.get("issue_type", ""),
+                "case_number": row.get("case_id", ""),
+                "file_name": row.get("file_name", ""),
+                "filed_date": row.get("filed_date", ""),
+                "message": row.get("detail", ""),
+            }
+            for row in issues
+        ],
+        "clean_cases_count": clean_cases_count,
+    }
+    OUTPUT_JSON.parent.mkdir(parents=True, exist_ok=True)
+    with OUTPUT_JSON.open("w", encoding="utf-8") as jf:
+        json.dump(payload, jf, indent=2)
 
     # Optionally archive a timestamped copy for history
     if timestamp:
@@ -181,7 +207,8 @@ def main() -> None:
     parsed = load_parsed(args.parsed)
     cases = load_cases(args.cases)
     issues = audit(parsed, cases)
-    write_issues(issues, args.output, timestamp=not args.no_archive)
+    parsed_cases_count = len({(doc.get("case_number") or "").strip() for doc in parsed if doc.get("case_number")})
+    write_issues(issues, args.output, timestamp=not args.no_archive, parsed_cases=parsed_cases_count)
     print(f"Wrote audit issues to {args.output} ({len(issues)} rows)")
 
 
