@@ -41,6 +41,7 @@ Runs on each PR (or before merge):
 - `python parse_court_docs.py`
 - `python audit_court_docs.py`
 - `python verify_contract.py`
+- `python extract_unknown_event_types.py`
 - `python checker.py` (if present)
 Blocks merge if Case Zero contract fails.
 

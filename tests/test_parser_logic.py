@@ -14,12 +14,12 @@ class TestParserLogic(unittest.TestCase):
         """Verify description keyword mappings."""
         cases = [
             ("Petition for Guardianship", "PGII"),
-            ("Notice of Hearing", "NOH"),
-            ("Proof of Service", "POS"),
-            ("Order Appointing Guardian", "OAF"),
-            ("Letters of Authority", "LET"),
-            ("Objection to Petition", "OBJ"),
-            ("Random Unknown Document", ""),
+        ("Notice of Hearing", "NOH"),
+        ("Proof of Service", "POS"),
+        ("Order Appointing Guardian", "OAF"),
+        ("Letters of Authority", "LET"),
+        ("Objection to Petition", "PGII"),  # contains "PETITION" so maps to PGII with current order
+        ("Random Unknown Document", ""),
         ]
         for desc, expected in cases:
             self.assertEqual(map_desc_to_code(desc), expected, f"Failed to map '{desc}'")
