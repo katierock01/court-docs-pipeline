@@ -987,3 +987,103 @@ footer .container small {
 .accordion-panel.open {
   display: block;
 }
+
+/* ---------- Dark navy override (V1.0) ---------- */
+:root {
+  --navy-dark: #001f3f;
+  --text-light: #f5f5f5;
+  --text-secondary: #d0d0d0;
+}
+
+html,
+body {
+  background-color: var(--navy-dark);
+  color: var(--text-light);
+}
+
+header,
+.header {
+  background-color: var(--navy-dark);
+  color: var(--text-light);
+  border-bottom: 2px solid var(--coral);
+}
+
+header h1,
+header p {
+  color: var(--text-light);
+}
+
+main,
+.content,
+footer,
+.card,
+.panel,
+section {
+  background-color: #0a1528;
+  color: var(--text-light);
+}
+
+.card h2,
+.panel h2,
+section h2 {
+  color: var(--text-light);
+  border-bottom: 2px solid var(--coral);
+  padding-bottom: 0.5rem;
+}
+
+table {
+  background-color: #0a1528;
+  color: var(--text-light);
+  border: 1px solid var(--baby-blue, #7fdbca);
+}
+
+thead th {
+  background: #0f2139;
+  border-bottom: 2px solid var(--coral);
+  color: var(--text-light);
+}
+
+table td,
+table th {
+  border-bottom: 1px solid var(--baby-blue, #7fdbca);
+}
+
+button,
+.btn,
+input[type="button"],
+input[type="submit"] {
+  background-color: var(--coral);
+  color: #fff;
+  border: none;
+}
+
+button:hover,
+.btn:hover {
+  background-color: #e63a2e;
+}
+
+input,
+select,
+textarea {
+  background-color: #0f2139;
+  color: var(--text-light);
+  border: 1px solid var(--baby-blue, #7fdbca);
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: var(--text-secondary);
+}
+
+a {
+  color: var(--baby-blue, #7fdbca);
+}
+
+a:hover {
+  color: var(--coral);
+}
+
+footer {
+  border-top: 2px solid var(--baby-blue, #7fdbca);
+  color: var(--text-secondary);
+}
