@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Court Documents - Guardianship Navigator</title>
+  <link rel="stylesheet" href="css/6420-final.css">
+  <script src="js/6420-final.js" defer></script>
+</head>
+<body>
+
+<a href="#main" class="skip-link">Skip to main content</a>
+
+<header>
+  <div class="header-topline"></div>
+  <div class="container">
+    <div class="nav-row">
+      <div class="brand">
+        <h1>Oakland Guardianship Navigator</h1>
+        <p>INF 6420 Final - Katie Rock - <a href="mailto:fn9575@wayne.edu">fn9575@wayne.edu</a></p>
+        <span class="badge">Court document tracker</span>
+      </div>
+
+      <button class="menu-toggle"
+              type="button"
+              aria-controls="site-nav"
+              aria-expanded="false">
+        Menu
+      </button>
+
+      <nav id="site-nav" class="site-nav" aria-label="Site navigation">
+        <ul>
+          <li><a href="6420final-index.html">Home</a></li>
+          <li><a href="casezero-storyboard.html">Case Zero Storyboard</a></li>
+          <li><a href="timeline-matrix.html">Timeline Matrix</a></li>
+          <li><a href="reform-hub.html">Reform Hub</a></li>
+          <li><a href="actions-and-resources.html">Actions &amp; Resources</a></li>
+          <li><a href="feedback.html">Feedback</a></li>
+          <li><a href="methods-inf6420.html">Methods</a></li>
+          <li><a href="final-reflection.html">Final Reflection</a></li>
+          <li><a href="court-documents.html" aria-current="page">Court Documents</a></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</header>
+
+<main id="main" class="container" aria-labelledby="page-title">
+  <section class="card hero" id="court-documents">
+    <p class="kicker">New</p>
+    <h2 id="page-title">Court document pipeline</h2>
+    <p>
+      Track scanned filings end-to-end: OCR, parse, validate against cases, and surface data quality risks.
+      Outputs stay in <code>data/</code> for the Python checks and this dashboard.
+    </p>
+    <div class="callout" role="note" aria-label="Steps">
+      <ol>
+        <li>Place PDFs in <code>court_docs/</code></li>
+        <li>Run OCR: <code>python ocr_extractor.py --input-dir court_docs --output-dir data/court_docs_text</code></li>
+        <li>Parse: <code>python parse_court_docs.py</code></li>
+        <li>Audit: <code>python audit_court_docs.py</code></li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="card">
+    <h2>Inventory at a glance</h2>
+    <div class="stat-grid" role="list">
+      <article class="stat-card" role="listitem">
+        <span class="stat-label">Total documents</span>
+        <span class="stat-value" id="stat-total-docs">0</span>
+      </article>
+      <article class="stat-card" role="listitem">
+        <span class="stat-label">Cases covered</span>
+        <span class="stat-value" id="stat-total-cases">0</span>
+      </article>
+      <article class="stat-card" role="listitem">
+        <span class="stat-label">Document types</span>
+        <span class="stat-value" id="stat-total-types">0</span>
+      </article>
+    </div>
+  </section>
+
+  <section class="card">
+    <h2>Parsed documents</h2>
+    <div class="filters" aria-label="Filters">
+      <label>
+        Case
+        <select id="filter-case">
+          <option value="">All</option>
+        </select>
+      </label>
+      <label>
+        Document type
+        <select id="filter-type">
+          <option value="">All</option>
+        </select>
+      </label>
+      <label>
+        Confidence
+        <select id="filter-confidence">
+          <option value="">All</option>
+          <option value="low">Low confidence only</option>
+          <option value="high">High confidence only</option>
+        </select>
+      </label>
+      <label>
+        Search notes
+        <input id="filter-search" type="search" placeholder="Case, type, notes">
+      </label>
+    </div>
+
+    <div class="table-wrap">
+      <table id="court-doc-table">
+        <caption>Parsed court documents</caption>
+        <thead>
+        <tr>
+          <th scope="col">Case</th>
+          <th scope="col">Document</th>
+          <th scope="col">Filed date</th>
+          <th scope="col">Petitioner</th>
+          <th scope="col">Respondent</th>
+          <th scope="col">Guardian</th>
+          <th scope="col">Event code</th>
+          <th scope="col">Judge</th>
+          <th scope="col">Low confidence</th>
+          <th scope="col">Notes</th>
+          <th scope="col">Source file</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+          <td colspan="11">Loading parsed documents...</td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class="card">
+    <h2>Data quality warnings</h2>
+    <div class="stat-grid" role="list">
+      <article class="stat-card" role="listitem">
+        <span class="stat-label">Total Issues</span>
+        <span class="stat-value" id="audit-issue-count">0</span>
+      </article>
+      <article class="stat-card" role="listitem">
+        <span class="stat-label">Orphan Docs</span>
+        <span class="stat-value" id="audit-orphan-count">0</span>
+      </article>
+      <article class="stat-card" role="listitem">
+        <span class="stat-label">Clean Cases</span>
+        <span class="stat-value" id="audit-clean-count">0</span>
+      </article>
+    </div>
+    <ul id="audit-list" class="spacious-list">
+      <li>Loading audit findings...</li>
+    </ul>
+  </section>
+
+  <section class="card">
+    <div class="card-header">
+      <h2>Parser Health</h2>
+    </div>
+    <div class="stat-grid" style="margin-bottom: 1rem;">
+      <div class="stat-card">
+        <div class="stat-value" id="parser-files-count">0</div>
+        <div class="stat-label">Files Parsed</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-value" id="parser-table-count">0</div>
+        <div class="stat-label">Table Mode</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-value" id="parser-fallback-count">0</div>
+        <div class="stat-label">Fallback Mode</div>
+      </div>
+    </div>
+    <div class="card-header">
+      <h3>Parser Warnings</h3>
+    </div>
+    <ul id="parser-warnings-list" class="audit-list">
+      <li>Loading parser report...</li>
+    </ul>
+  </section>
+
+  <section class="card">
+    <h2>How to run the pipeline</h2>
+    <ol>
+      <li><strong>OCR PDFs</strong> - <code>python ocr_extractor.py --input-dir court_docs --output-dir data/court_docs_text</code></li>
+      <li><strong>Parse text to CSV</strong> - <code>python parse_court_docs.py</code></li>
+      <li><strong>Audit for gaps</strong> — <code>python audit_court_docs.py</code></li>
+      <li><strong>Re-run checks</strong> — <code>python checker.py</code> (shows court document counts per case)</li>
+    </ol>
+    <p class="legend-note">Outputs stay in <code>data/</code>: parsed docs (<code>court_docs_parsed.csv</code>), OCR summary (<code>court_docs_ocr_summary.csv</code>), audit (<code>court_docs_audit.csv</code>).</p>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <p>Adult guardianship visibility demo for INF 6420. No inline scripts. ARIA-friendly navigation.</p>
+  </div>
+</footer>
+
+</body>
+</html>

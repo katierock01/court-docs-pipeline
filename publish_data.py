@@ -13,6 +13,7 @@ from pathlib import Path
 
 SOURCE_DIR = Path("data")
 DEST_DIR = Path("docs") / "data"
+DOCS_ROOT = Path("docs")
 
 # Files that must exist for the site to function
 CRITICAL_FILES = [
@@ -25,6 +26,11 @@ OPTIONAL_FILES = [
     "audit_results.json",
     "parse_report.json",
     "unknown_event_types.csv",
+]
+
+# Pages to copy (source -> destination) to ensure GitHub Pages has the HTML entry points.
+PAGES_TO_COPY = [
+    (Path("court-documents.html"), DOCS_ROOT / "dashboard.html"),
 ]
 
 
@@ -65,6 +71,18 @@ def main() -> int:
                 print(f"   [WARN] Skipping {filename} (not found)")
 
     print(f"\n[DONE] {copied_count} files published to {DEST_DIR}.")
+    # Copy dashboard HTML into docs/ for GitHub Pages
+    for src, dst in PAGES_TO_COPY:
+        if src.exists():
+            dst.parent.mkdir(parents=True, exist_ok=True)
+            try:
+                shutil.copy2(src, dst)
+                print(f"[OK] Copied page {src} -> {dst}")
+            except Exception as e:
+                print(f"[WARN] Failed to copy page {src}: {e}")
+        else:
+            print(f"[WARN] Page not found, skipping: {src}")
+
     print("Ready to commit and push.")
     return 0
 
