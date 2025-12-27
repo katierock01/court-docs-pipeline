@@ -3,82 +3,126 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Court Docs Pipeline | EmpathTech</title>
-    <!-- CSS: Pointing up one level to the repo's CSS folder -->
-    <link rel="stylesheet" href="../css/6420-final.css">
+    <title>Oakland Guardianship Navigator | Pipeline</title>
+<link rel="stylesheet" href="css/6420-final.css">
     <style>
-        /* Minimal overrides for landing page layout */
-        .landing-container {
-            max-width: 800px;
-            margin: 4rem auto;
-            padding: 2rem;
-            text-align: center;
+        :root {
+          --brand-navy: #003366;
+          --brand-coral: #FF7F50;
+          --brand-baby-blue: #89CFF0;
+          --bg: #f4f4f9;
+          --text: #333;
         }
-        .hero-buttons {
-            margin-top: 2rem;
-            display: flex;
-            gap: 1rem;
-            justify-content: center;
-        }
-        .btn {
-            display: inline-block;
-            padding: 0.75rem 1.5rem;
-            border-radius: 4px;
-            text-decoration: none;
-            font-weight: bold;
-            transition: background-color 0.2s;
-            background-color: #003366; /* Fallback */
-            color: white;
-        }
-        .btn-secondary {
-            background-color: #f0f0f0;
-            color: #333;
-            border: 1px solid #ccc;
-        }
-        .pipeline-steps {
-            display: flex;
-            justify-content: space-between;
-            margin: 3rem 0;
-            text-align: left;
-        }
-        .step {
-            flex: 1;
-            padding: 1rem;
-            background: #f9f9f9;
-            margin: 0 0.5rem;
-            border-radius: 4px;
-            border-left: 4px solid #ff6b6b; /* Fallback accent */
-        }
+        body { font-family: 'Segoe UI', Tahoma, sans-serif; margin: 0; background: var(--bg); color: var(--text); }
+        .navbar { background: var(--brand-navy); color: white; padding: 1.5rem 2rem; border-bottom: 5px solid var(--brand-coral); display: flex; justify-content: space-between; align-items: center; }
+        .navbar h1 { margin: 0; font-size: 1.4rem; }
+        .navbar .sub-brand { color: var(--brand-baby-blue); font-size: 0.9rem; }
+        .navbar a { color: white; text-decoration: none; font-weight: bold; border: 1px solid var(--brand-baby-blue); padding: 6px 10px; border-radius: 4px; }
+        .navbar a:hover { background: var(--brand-coral); border-color: var(--brand-coral); }
+        .container { max-width: 900px; margin: 2rem auto; padding: 0 1rem; }
+        .card { background: white; padding: 1.5rem; margin-bottom: 1.5rem; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); border-left: 5px solid var(--brand-baby-blue); }
+        .card h2 { margin-top: 0; color: var(--brand-navy); border-bottom: 1px solid #eee; padding-bottom: 0.5rem; }
+        .metric-box { display: flex; justify-content: space-between; margin-bottom: 0.6rem; font-size: 1.05rem; }
+        .metric-value { font-weight: bold; color: var(--brand-navy); }
+        .btn { display: inline-block; padding: 0.6rem 1.2rem; background: var(--brand-navy); color: white; text-decoration: none; border-radius: 4px; font-weight: 700; }
+        .btn:hover { background: var(--brand-coral); }
+        ul.clean { list-style: none; padding: 0; }
+        ul.clean li { margin: 0.35rem 0; }
     </style>
 </head>
 <body>
-    <div class="landing-container card">
-        <h1>Court Docs Pipeline</h1>
-        <p class="lead">Automated parsing, auditing, and verification for Michigan Probate Court documents.</p>
-        
-        <div class="pipeline-steps">
-            <div class="step">
-                <strong>1. Ingest</strong><br>
-                Reads raw text/PDFs from court records.
-            </div>
-            <div class="step">
-                <strong>2. Parse</strong><br>
-                Extracts events using hybrid table/regex logic.
-            </div>
-            <div class="step">
-                <strong>3. Audit</strong><br>
-                Validates against Case Zero Contract (ID: 2025-0000424475-GA).
-            </div>
-        </div>
-
-        <div class="hero-buttons">
-            <a href="dashboard.html" class="btn btn-primary">Open Dashboard</a>
-            <a href="https://github.com/katierock01/court-docs-pipeline" class="btn btn-secondary">View Repository</a>
-        </div>
-        
-        <p style="margin-top: 2rem; font-size: 0.9rem; color: #666;">
-            Built by EmpathTech Agents (Architect, Builder, Analyst).
-        </p>
+    <div class="navbar">
+      <div>
+        <h1>Oakland Guardianship Navigator</h1>
+        <div class="sub-brand">INF 6420 Final — Katie Rock — fn9575@wayne.edu</div>
+      </div>
+      <div>
+        <a href="https://github.com/katierock01/court-docs-pipeline" target="_blank">View Repo ↗</a>
+      </div>
     </div>
+
+    <div class="container">
+      <div class="card">
+        <h2>Pipeline Status</h2>
+        <div id="metrics">Loading metrics...</div>
+        <p style="margin-top: 1rem; font-size: 0.85rem; color: #666;">
+          Agent: Builder | Last Build: <span id="build-date">Just now</span>
+        </p>
+      </div>
+
+      <div class="card">
+        <h2>Data Artifacts</h2>
+        <p>Access the raw data processed by the pipeline:</p>
+        <ul class="clean">
+          <li><a href="data/court_docs_parsed.csv" class="btn">⬇️ Download Parsed CSV</a></li>
+          <li><a href="dashboard.html" class="btn" style="background: var(--brand-coral); border: none;">📊 Open Dashboard</a></li>
+          <li><a href="data/parse_report.json">Parse Report (JSON)</a></li>
+          <li><a href="data/audit_results.json">Audit Results (JSON)</a></li>
+          <li><a href="data/court_docs_audit.csv">Audit Results (CSV)</a></li>
+          <li><a href="data/unknown_event_types.csv">Unknown Event Types (CSV)</a></li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h2>Data Quality Audit</h2>
+        <div id="audit-log">Loading audit data...</div>
+      </div>
+    </div>
+
+    <script>
+      async function loadData() {
+        try {
+          const parseRes = await fetch('data/parse_report.json');
+          const parseData = parseRes.ok ? await parseRes.json() : [];
+
+          const auditRes = await fetch('data/audit_results.json');
+          const auditData = auditRes.ok ? await auditRes.json() : { issues: [] };
+
+          let totalEvents = 0;
+          parseData.forEach(f => totalEvents += (f.events_found || 0));
+          const filesProcessed = parseData.length;
+          const issueCount = auditData.issues ? auditData.issues.length : 0;
+
+          document.getElementById('metrics').innerHTML = `
+            <div class="metric-box">
+              <span>Total Events Parsed:</span>
+              <span class="metric-value">${totalEvents}</span>
+            </div>
+            <div class="metric-box">
+              <span>Files Processed:</span>
+              <span class="metric-value">${filesProcessed}</span>
+            </div>
+            <div class="metric-box">
+              <span>Audit Issues:</span>
+              <span class="metric-value" style="color: ${issueCount > 0 ? '#FF7F50' : '#27ae60'}">${issueCount}</span>
+            </div>
+          `;
+
+          if (issueCount === 0) {
+            document.getElementById('audit-log').innerHTML = '<p style="color:green">✅ No data quality issues found.</p>';
+          } else {
+            let html = '<table><thead><tr><th>Type</th><th>Case ID</th><th>Message</th></tr></thead><tbody>';
+            auditData.issues.slice(0, 10).forEach(issue => {
+              html += `<tr>
+                <td><strong>${issue.type}</strong></td>
+                <td>${issue.case_number}</td>
+                <td>${issue.message}</td>
+              </tr>`;
+            });
+            html += '</tbody></table>';
+            if (auditData.issues.length > 10) {
+              html += `<p>...and ${auditData.issues.length - 10} more.</p>`;
+            }
+            document.getElementById('audit-log').innerHTML = html;
+          }
+
+          document.getElementById('build-date').innerText = new Date().toLocaleString();
+        } catch (e) {
+          console.error(e);
+          document.getElementById('metrics').innerHTML = '<p style="color:red">Error loading data. Ensure publish_data.py ran successfully.</p>';
+        }
+      }
+      loadData();
+    </script>
 </body>
 </html>
